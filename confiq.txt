@@ -1,0 +1,5344 @@
+{
+  "00000000-0000-0000-0000-000000000000": {
+    "connectionState": true,
+    "sysapName": "H B / EG / W17",
+    "devices": {
+      "ABB700000000": {
+        "interface": "sysap",
+        "displayName": "SysAP",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "SysAP",
+            "functionID": "25",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 20,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 18,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "FFFF4A000001": {
+        "displayName": "Time program actuator",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Time program actuator",
+            "functionID": "4a00",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 61697,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 61698,
+                "value": "1"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597B58E": {
+        "floor": "01",
+        "room": "01",
+        "interface": "TP",
+        "displayName": "Wohnen Oben",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Wohnen Oben",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "Wohnen Oben",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB2C55D3D51": {
+        "interface": "TP",
+        "displayName": "Heating actuator, 6gang, MDRC",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "floor": "01",
+            "room": "01",
+            "displayName": "Wohnen",
+            "functionID": "27",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 309,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 273,
+                "value": "0"
+              }
+            }
+          },
+          "ch0001": {
+            "floor": "01",
+            "room": "03",
+            "displayName": "Zimmer1",
+            "functionID": "27",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 309,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 273,
+                "value": "0"
+              }
+            }
+          },
+          "ch0002": {
+            "floor": "01",
+            "room": "04",
+            "displayName": "Bad",
+            "functionID": "27",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 309,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 273,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "\u24b9",
+            "functionID": "27",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 309,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 273,
+                "value": "0"
+              }
+            }
+          },
+          "ch0004": {
+            "displayName": "\u24ba",
+            "functionID": "27",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 309,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 273,
+                "value": "0"
+              }
+            }
+          },
+          "ch0005": {
+            "displayName": "\u24bb",
+            "functionID": "27",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 309,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 273,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597B828": {
+        "floor": "01",
+        "room": "01",
+        "interface": "TP",
+        "displayName": "K\u00fcche",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "K\u00fcche",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "K\u00fcche",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597C859": {
+        "floor": "01",
+        "room": "02",
+        "interface": "TP",
+        "displayName": "Flur bei Bad",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Flur bei Bad",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597B84F": {
+        "floor": "01",
+        "room": "01",
+        "interface": "TP",
+        "displayName": "Wohnen Mitte",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Wohnen Mitte",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "Wohnen Mitte",
+            "functionID": "3",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F62C12CA": {
+        "displayName": "SysAP communication interface",
+        "unresponsive": false,
+        "channels": {}
+      },
+      "FFFF48030001": {
+        "floor": "01",
+        "room": "FC",
+        "displayName": "All blinds open",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "All blinds open",
+            "functionID": "4803",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 4,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F62C12CB": {
+        "displayName": "SysAP communication interface",
+        "unresponsive": false,
+        "channels": {}
+      },
+      "ABB22F603D51": {
+        "interface": "TP",
+        "displayName": "Switch actuator, 4gang, 16 A, MDRC",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "floor": "01",
+            "room": "01",
+            "displayName": "Licht K\u00fcche",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0001": {
+            "floor": "01",
+            "room": "03",
+            "displayName": "Licht Zimmer1",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0002": {
+            "floor": "01",
+            "room": "04",
+            "displayName": "Licht Bad Decke",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "floor": "01",
+            "room": "04",
+            "displayName": "Licht Bad Spiegel",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597B82F": {
+        "floor": "01",
+        "room": "01",
+        "interface": "TP",
+        "displayName": "Essen Unten",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Essen Unten",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "Essen Unten",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "FFFF4A010003": {
+        "displayName": "Storm",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Storm",
+            "functionID": "4a01",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 61697,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 61698,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597AE14": {
+        "floor": "01",
+        "room": "01",
+        "interface": "TP",
+        "displayName": "Wohnen",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Wohnen",
+            "functionID": "23",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 322,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 325,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 326,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 329,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 330,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 51,
+                "value": "invalid"
+              },
+              "idp000a": {
+                "pairingID": 52,
+                "value": "invalid"
+              },
+              "idp000b": {
+                "pairingID": 56,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 54,
+                "value": "0"
+              },
+              "idp000d": {
+                "pairingID": 49,
+                "value": "0"
+              },
+              "idp000e": {
+                "pairingID": 55,
+                "value": "0"
+              },
+              "idp000f": {
+                "pairingID": 57,
+                "value": "invalid"
+              },
+              "idp0010": {
+                "pairingID": 64,
+                "value": "0"
+              },
+              "idp0011": {
+                "pairingID": 58,
+                "value": "0"
+              },
+              "idp0012": {
+                "pairingID": 66,
+                "value": "0"
+              },
+              "idp0013": {
+                "pairingID": 7,
+                "value": "0"
+              },
+              "idp0014": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0015": {
+                "pairingID": 53,
+                "value": "0"
+              },
+              "idp0016": {
+                "pairingID": 320,
+                "value": "22"
+              },
+              "idp0017": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0018": {
+                "pairingID": 304,
+                "value": "invalid"
+              },
+              "idp0019": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "idp001a": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 324,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 310,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 327,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 51,
+                "value": "20"
+              },
+              "odp0007": {
+                "pairingID": 52,
+                "value": "-1"
+              },
+              "odp0008": {
+                "pairingID": 56,
+                "value": "1"
+              },
+              "odp0009": {
+                "pairingID": 54,
+                "value": "65"
+              },
+              "odp000a": {
+                "pairingID": 49,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 55,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 57,
+                "value": "invalid"
+              },
+              "odp000d": {
+                "pairingID": 66,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 58,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 64,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 304,
+                "value": "24.54"
+              },
+              "odp0011": {
+                "pairingID": 331,
+                "value": "0"
+              },
+              "odp0012": {
+                "pairingID": 332,
+                "value": "0"
+              },
+              "odp0013": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "odp0014": {
+                "pairingID": 334,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "FFFF4A010006": {
+        "displayName": "Morning",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Morning",
+            "functionID": "4a01",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 61697,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 61698,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597B8A3": {
+        "floor": "01",
+        "room": "04",
+        "interface": "TP",
+        "displayName": "Bad",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Bad",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "Bad",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "FFFF4A010007": {
+        "displayName": "Evening",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Evening",
+            "functionID": "4a01",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 61697,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 61698,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "FFFF48040001": {
+        "floor": "01",
+        "room": "FC",
+        "displayName": "All blinds closed",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "All blinds closed",
+            "functionID": "4804",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 4,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597AD39": {
+        "floor": "01",
+        "room": "03",
+        "interface": "TP",
+        "displayName": "Zimmer1",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Zimmer1",
+            "functionID": "23",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 322,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 325,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 326,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 329,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 330,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 51,
+                "value": "invalid"
+              },
+              "idp000a": {
+                "pairingID": 52,
+                "value": "invalid"
+              },
+              "idp000b": {
+                "pairingID": 56,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 54,
+                "value": "0"
+              },
+              "idp000d": {
+                "pairingID": 49,
+                "value": "0"
+              },
+              "idp000e": {
+                "pairingID": 55,
+                "value": "0"
+              },
+              "idp000f": {
+                "pairingID": 57,
+                "value": "invalid"
+              },
+              "idp0010": {
+                "pairingID": 64,
+                "value": "0"
+              },
+              "idp0011": {
+                "pairingID": 58,
+                "value": "0"
+              },
+              "idp0012": {
+                "pairingID": 66,
+                "value": "1"
+              },
+              "idp0013": {
+                "pairingID": 7,
+                "value": "0"
+              },
+              "idp0014": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0015": {
+                "pairingID": 53,
+                "value": "0"
+              },
+              "idp0016": {
+                "pairingID": 320,
+                "value": "22"
+              },
+              "idp0017": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0018": {
+                "pairingID": 304,
+                "value": "invalid"
+              },
+              "idp0019": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "idp001a": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 324,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 310,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 327,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 51,
+                "value": "20"
+              },
+              "odp0007": {
+                "pairingID": 52,
+                "value": "-1"
+              },
+              "odp0008": {
+                "pairingID": 56,
+                "value": "1"
+              },
+              "odp0009": {
+                "pairingID": 54,
+                "value": "65"
+              },
+              "odp000a": {
+                "pairingID": 49,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 55,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 57,
+                "value": "invalid"
+              },
+              "odp000d": {
+                "pairingID": 66,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 58,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 64,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 304,
+                "value": "23.82"
+              },
+              "odp0011": {
+                "pairingID": 331,
+                "value": "0"
+              },
+              "odp0012": {
+                "pairingID": 332,
+                "value": "0"
+              },
+              "odp0013": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "odp0014": {
+                "pairingID": 334,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597B551": {
+        "floor": "01",
+        "room": "03",
+        "interface": "TP",
+        "displayName": "Zimmer1",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Zimmer1",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "Zimmer1",
+            "functionID": "3",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "1"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "FFFF48000001": {
+        "floor": "01",
+        "room": "FC",
+        "displayName": "Lights on",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Lights on",
+            "functionID": "4800",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 4,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F4FC49BF": {
+        "floor": "01",
+        "room": "05",
+        "interface": "TP",
+        "displayName": "HWR",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "HWR",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ED0100003361": {
+        "floor": "01",
+        "nativeId": "13153",
+        "room": "06",
+        "displayName": "Haus B Dach",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Haus B Dach",
+            "functionID": "41",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1026,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 1027,
+                "value": "3054.08"
+              },
+              "odp0002": {
+                "pairingID": 4,
+                "value": "0"
+              }
+            }
+          },
+          "ch0001": {
+            "displayName": "Haus B Dach",
+            "functionID": "42",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 39,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 1029,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 1030,
+                "value": "0"
+              }
+            }
+          },
+          "ch0002": {
+            "displayName": "Haus B Dach",
+            "functionID": "43",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 38,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 1024,
+                "value": "26.1"
+              },
+              "odp0002": {
+                "pairingID": 4,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "Haus B Dach",
+            "functionID": "44",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 37,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 1025,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 1028,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597AD18": {
+        "floor": "01",
+        "room": "04",
+        "interface": "TP",
+        "displayName": "Bad",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Bad",
+            "functionID": "23",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 306,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 322,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 325,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 326,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 329,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 330,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 51,
+                "value": "invalid"
+              },
+              "idp000a": {
+                "pairingID": 52,
+                "value": "invalid"
+              },
+              "idp000b": {
+                "pairingID": 56,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 54,
+                "value": "0"
+              },
+              "idp000d": {
+                "pairingID": 49,
+                "value": "0"
+              },
+              "idp000e": {
+                "pairingID": 55,
+                "value": "0"
+              },
+              "idp000f": {
+                "pairingID": 57,
+                "value": "invalid"
+              },
+              "idp0010": {
+                "pairingID": 64,
+                "value": "0"
+              },
+              "idp0011": {
+                "pairingID": 58,
+                "value": "0"
+              },
+              "idp0012": {
+                "pairingID": 66,
+                "value": "1"
+              },
+              "idp0013": {
+                "pairingID": 7,
+                "value": "0"
+              },
+              "idp0014": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0015": {
+                "pairingID": 53,
+                "value": "0"
+              },
+              "idp0016": {
+                "pairingID": 320,
+                "value": "22"
+              },
+              "idp0017": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0018": {
+                "pairingID": 304,
+                "value": "invalid"
+              },
+              "idp0019": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "idp001a": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 48,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 50,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 324,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 310,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 327,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 51,
+                "value": "20.5"
+              },
+              "odp0007": {
+                "pairingID": 52,
+                "value": "-0.5"
+              },
+              "odp0008": {
+                "pairingID": 56,
+                "value": "1"
+              },
+              "odp0009": {
+                "pairingID": 54,
+                "value": "65"
+              },
+              "odp000a": {
+                "pairingID": 49,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 55,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 57,
+                "value": "invalid"
+              },
+              "odp000d": {
+                "pairingID": 66,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 58,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 64,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 304,
+                "value": "23.74"
+              },
+              "odp0011": {
+                "pairingID": 331,
+                "value": "0"
+              },
+              "odp0012": {
+                "pairingID": 332,
+                "value": "0"
+              },
+              "odp0013": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "odp0014": {
+                "pairingID": 334,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB22D573D51": {
+        "interface": "TP",
+        "displayName": "Switch actuator, 4gang, 16 A, MDRC",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "floor": "01",
+            "room": "02",
+            "displayName": "Licht Flur",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0001": {
+            "floor": "01",
+            "room": "05",
+            "displayName": "Licht HWR",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0002": {
+            "floor": "01",
+            "room": "01",
+            "displayName": "Licht Essen",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "floor": "01",
+            "room": "01",
+            "displayName": "Licht Wohnen",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "1"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB23F603D51": {
+        "interface": "TP",
+        "displayName": "Switch actuator, 4gang, 16 A, MDRC",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "floor": "01",
+            "room": "01",
+            "displayName": "Steckdose Wohnen",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "1"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "1"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0001": {
+            "floor": "01",
+            "room": "01",
+            "displayName": "Steckdose K\u00fcche",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0002": {
+            "floor": "01",
+            "room": "06",
+            "displayName": "Steckdose Terasse",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "\u24b9",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB27E603D51": {
+        "interface": "TP",
+        "displayName": "Switch actuator, 4gang, 16 A, MDRC",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "floor": "01",
+            "room": "06",
+            "displayName": "Licht Balkon",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0001": {
+            "displayName": "\u24b7",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0002": {
+            "displayName": "\u24b8",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "\u24b9",
+            "functionID": "7",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 6,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 323,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 333,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 334,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 48,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 256,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 321,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 305,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 335,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 336,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "FFFF48010001": {
+        "floor": "01",
+        "room": "FC",
+        "displayName": "Panic scene",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Panic scene",
+            "functionID": "4801",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 4,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597E40A": {
+        "floor": "01",
+        "room": "01",
+        "interface": "TP",
+        "displayName": "Wohnen/K\u00fcche Unten",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Wohnen/K\u00fcche Unten",
+            "functionID": "3",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "1"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB226983A51": {
+        "interface": "TP",
+        "displayName": "Blind actuator, 4gang, MDRC",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "floor": "01",
+            "room": "01",
+            "displayName": "Jalousie Balkont\u00fcre",
+            "functionID": "9",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 35,
+                "value": "57"
+              },
+              "idp0003": {
+                "pairingID": 36,
+                "value": "100"
+              },
+              "idp0004": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 37,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 39,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 38,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 4,
+                "value": "2"
+              },
+              "idp0009": {
+                "pairingID": 53,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 288,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 289,
+                "value": "100"
+              },
+              "odp0002": {
+                "pairingID": 290,
+                "value": "60"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 257,
+                "value": "0"
+              }
+            }
+          },
+          "ch0001": {
+            "floor": "01",
+            "room": "01",
+            "displayName": "Jalousie Wohnen",
+            "functionID": "9",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 32,
+                "value": "1"
+              },
+              "idp0001": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 35,
+                "value": "100"
+              },
+              "idp0003": {
+                "pairingID": 36,
+                "value": "100"
+              },
+              "idp0004": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 37,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 39,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 38,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 4,
+                "value": "2"
+              },
+              "idp0009": {
+                "pairingID": 53,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 288,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 289,
+                "value": "100"
+              },
+              "odp0002": {
+                "pairingID": 290,
+                "value": "57"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 257,
+                "value": "0"
+              }
+            }
+          },
+          "ch0002": {
+            "floor": "01",
+            "room": "03",
+            "displayName": "Jalousie Zimmer1",
+            "functionID": "9",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 32,
+                "value": "1"
+              },
+              "idp0001": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 35,
+                "value": "100"
+              },
+              "idp0003": {
+                "pairingID": 36,
+                "value": "100"
+              },
+              "idp0004": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 37,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 39,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 38,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 4,
+                "value": "2"
+              },
+              "idp0009": {
+                "pairingID": 53,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 288,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 289,
+                "value": "100"
+              },
+              "odp0002": {
+                "pairingID": 290,
+                "value": "100"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 257,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "\u24b9",
+            "functionID": "9",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 35,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 36,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 37,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 39,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 38,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 53,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 288,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 289,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 290,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 273,
+                "value": "16"
+              },
+              "odp0004": {
+                "pairingID": 257,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597E40C": {
+        "floor": "01",
+        "room": "02",
+        "interface": "TP",
+        "displayName": "Flur bei Wohnen",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Flur bei Wohnen",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "1"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597B55E": {
+        "floor": "01",
+        "room": "01",
+        "interface": "TP",
+        "displayName": "Essen Oben",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Essen Oben",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          },
+          "ch0003": {
+            "displayName": "Essen Oben",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597CA9E": {
+        "floor": "01",
+        "room": "02",
+        "interface": "TP",
+        "displayName": "Flur Eingang",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Flur Eingang",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "ABB7F597E3C7": {
+        "floor": "01",
+        "room": "03",
+        "interface": "TP",
+        "displayName": "Zimmer1 Bett",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "Zimmer1 Bett",
+            "functionID": "0",
+            "inputs": {
+              "idp0000": {
+                "pairingID": 256,
+                "value": "0"
+              },
+              "idp0001": {
+                "pairingID": 18,
+                "value": "0"
+              },
+              "idp0002": {
+                "pairingID": 273,
+                "value": "0"
+              },
+              "idp0003": {
+                "pairingID": 257,
+                "value": "0"
+              },
+              "idp0004": {
+                "pairingID": 261,
+                "value": "0"
+              },
+              "idp0005": {
+                "pairingID": 278,
+                "value": "0"
+              },
+              "idp0006": {
+                "pairingID": 262,
+                "value": "0"
+              },
+              "idp0007": {
+                "pairingID": 1120,
+                "value": "0"
+              },
+              "idp0008": {
+                "pairingID": 61698,
+                "value": "0"
+              },
+              "idp0009": {
+                "pairingID": 272,
+                "value": "0"
+              },
+              "idp000a": {
+                "pairingID": 277,
+                "value": "0"
+              },
+              "idp000b": {
+                "pairingID": 354,
+                "value": "0"
+              },
+              "idp000c": {
+                "pairingID": 355,
+                "value": "0"
+              }
+            },
+            "outputs": {
+              "odp0000": {
+                "pairingID": 1,
+                "value": "0"
+              },
+              "odp0001": {
+                "pairingID": 16,
+                "value": "0"
+              },
+              "odp0002": {
+                "pairingID": 32,
+                "value": "0"
+              },
+              "odp0003": {
+                "pairingID": 33,
+                "value": "0"
+              },
+              "odp0004": {
+                "pairingID": 2,
+                "value": "0"
+              },
+              "odp0005": {
+                "pairingID": 3,
+                "value": "0"
+              },
+              "odp0006": {
+                "pairingID": 4,
+                "value": "0"
+              },
+              "odp0007": {
+                "pairingID": 40,
+                "value": "0"
+              },
+              "odp0008": {
+                "pairingID": 1088,
+                "value": "0"
+              },
+              "odp0009": {
+                "pairingID": 1089,
+                "value": "0"
+              },
+              "odp000a": {
+                "pairingID": 1090,
+                "value": "0"
+              },
+              "odp000b": {
+                "pairingID": 1091,
+                "value": "0"
+              },
+              "odp000c": {
+                "pairingID": 1094,
+                "value": "0"
+              },
+              "odp000d": {
+                "pairingID": 1098,
+                "value": "0"
+              },
+              "odp000e": {
+                "pairingID": 61697,
+                "value": "0"
+              },
+              "odp000f": {
+                "pairingID": 352,
+                "value": "0"
+              },
+              "odp0010": {
+                "pairingID": 353,
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "FFFF48020001": {
+        "floor": "01",
+        "room": "FC",
+        "displayName": "All off",
+        "unresponsive": false,
+        "channels": {
+          "ch0000": {
+            "displayName": "All off",
+            "functionID": "4802",
+            "inputs": {},
+            "outputs": {
+              "odp0000": {
+                "pairingID": 4,
+                "value": "0"
+              }
+            }
+          }
+        }
+      }
+    },
+    "device_copies": {},
+    "floorplan": {
+      "floors": {
+        "01": {
+          "name": "H B / EG / W17",
+          "rooms": {
+            "01": {
+              "name": "Wohnen/K\u00fcche"
+            },
+            "02": {
+              "name": "Flur"
+            },
+            "03": {
+              "name": "BettZimmer1"
+            },
+            "04": {
+              "name": "Bad"
+            },
+            "05": {
+              "name": "HWR"
+            },
+            "06": {
+              "name": "Terasse"
+            }
+          }
+        }
+      }
+    },
+    "users": {}
+  }
+}
