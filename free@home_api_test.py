@@ -21,6 +21,10 @@ def get_devices(url,user,password,sysap):
 
 
 
+lights = []
+shades = []
+heating = []
+
 
 #Login data for free@home: Settings---> Local API ---> Username
 user = 'Username'
@@ -45,6 +49,18 @@ for device in device_list:
     channel_names += str(device +' '+ package_json[sysap]['devices'][str(device)]['displayName'])
     for channel in package_json[sysap]['devices'][str(device)]['channels']:
         channel_names += str(' \n'+channel+' '+ package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
+        
+        # adding to lists
+        if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
+            lights.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+
+        if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':
+            heating.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+
+        if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
+            shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+        
+        
         for input in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
             channel_names += str(' ' + package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][input]['value'] )
     channel_names += str(' \n')
@@ -77,6 +93,10 @@ print(light_outside +" Lux Outside")
 print(wind_outside +" m/s Outside")
 print(windscale_outside +" bft Outside(The Beaufort scale)")
 
+
+print(lights)
+print(shades)
+print(heating)
 
 #Testing light on off
 light_on = "1"
