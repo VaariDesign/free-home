@@ -1,7 +1,5 @@
 import requests
 
-# package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
-
 class Light:
     def __init__(self,device, channel, displayname, value, inputchannel):
         self.device = device
