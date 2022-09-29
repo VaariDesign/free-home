@@ -1,5 +1,8 @@
 import requests
 import json
+
+import objects
+
 import time
 
 
@@ -53,6 +56,12 @@ for device in device_list:
         # adding to lists
         if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
             lights.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            for inputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["pairingID"] == "1":
+                    locals()[str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])] = Light()
+
+
+
 
         if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':
             heating.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
@@ -61,7 +70,7 @@ for device in device_list:
             shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
         
         
-        for input in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
+        for inputchannels in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
             channel_names += str(' ' + package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][input]['value'] )
     channel_names += str(' \n')
     channel_names += str(' \n')
@@ -99,37 +108,37 @@ print(shades)
 print(heating)
 
 #Testing light on off
-light_on = "1"
-light_off = "0"
+#light_on = "1"
+#light_off = "0"
 
-print("test wohnen light")
+#print("test wohnen light")
 
-print("Light on")
+#print("Light on")
 #requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
-print("wait 5 sec")
+#print("wait 5 sec")
 #time.sleep(5)
-print("light off")
+#print("light off")
 #requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password),data=light_off)
 
 
 # Moving lights
 #livingroom
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
 #dining
-time.sleep(1)
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_off)
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0002.idp0000',auth=(user, password), data=light_on)
+#time.sleep(1)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_off)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0002.idp0000',auth=(user, password), data=light_on)
 #kitchen
-time.sleep(1)
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22F603D51.ch0000.idp0000',auth=(user, password), data=light_on)
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0002.idp0000',auth=(user, password), data=light_off)
+#time.sleep(1)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22F603D51.ch0000.idp0000',auth=(user, password), data=light_on)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0002.idp0000',auth=(user, password), data=light_off)
 #flur
-time.sleep(1)
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0000.idp0000',auth=(user, password), data=light_on)
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22F603D51.ch0000.idp0000',auth=(user, password), data=light_off)
+#time.sleep(1)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0000.idp0000',auth=(user, password), data=light_on)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22F603D51.ch0000.idp0000',auth=(user, password), data=light_off)
 #wohnen
-time.sleep(1)
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
-requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0000.idp0000',auth=(user, password), data=light_off)
+#time.sleep(1)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
+#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0000.idp0000',auth=(user, password), data=light_off)
 
 
