@@ -1,7 +1,8 @@
 import requests
 import json
 
-import Classes
+
+from Classes import Light
 
 import time
 
@@ -30,7 +31,7 @@ heating = []
 
 
 #Login data for free@home: Settings---> Local API ---> Username
-user = 'Username'
+user =  'Username'
 password = 'Password' #same as log in your free@home
 url = 'IP-Address'
 
@@ -56,9 +57,15 @@ for device in device_list:
         # adding to lists
         if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
             lights.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
+
             for inputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
-                if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["pairingID"] == "1":
-                    locals()[str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])] = Light()
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["pairingID"] == 1:
+                    print("pass")
+                    value = package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["value"]
+                    locals()[str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])] =\
+                        Light(device,channel, displayname, value, inputchannel)
+                    print("pass")
 
 
 
@@ -71,7 +78,7 @@ for device in device_list:
         
         
         for inputchannels in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
-            channel_names += str(' ' + package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][input]['value'] )
+            channel_names += str(' ' + package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannels]['value'] )
     channel_names += str(' \n')
     channel_names += str(' \n')
 
@@ -106,6 +113,9 @@ print(windscale_outside +" bft Outside(The Beaufort scale)")
 print(lights)
 print(shades)
 print(heating)
+for valo in lights:
+    print(locals()[valo].status())
+
 
 #Testing light on off
 #light_on = "1"
