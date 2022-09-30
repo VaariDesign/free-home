@@ -29,7 +29,7 @@ lights = []
 shades = []
 heating = []
 
-
+#Add this seperate module
 #Login data for free@home: Settings---> Local API ---> Username
 user =  'Username'
 password = 'Password' #same as log in your free@home
