@@ -3,7 +3,7 @@ import json
 
 import input_data
 
-from Classes import Light
+from classes import Light
 
 import time
 
@@ -24,9 +24,20 @@ def get_devices(url,user,password,sysap):
     device_list = devices.json()[sysap]
     return device_list
 
+def make_light(sysap,device,channel,displayname,inputchannel):
+    value = package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["value"]
+    name =str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
+    variable_name = name.replace(" ","_")
+    print(variable_name)
+    locals()[variable_name] = Light(device,channel, displayname, value, inputchannel)
+    locals()[variable_name].status()
+    return locals()[variable_name]
+    print("pass")
+
 
 
 lights = []
+light_obj = []
 shades = []
 heating = []
 
@@ -56,20 +67,18 @@ for device in device_list:
         # Dont want unused names in list
         if len(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']) <= 2:
             print ("Too short device name: Less than 2 characters")
-            
+
         # adding to lists if name is not too short
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
-            lights.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            light_name1 = (str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            light_name = light_name1.replace(" ","_")
+            lights.append(light_name)
             displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
 
             for inputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["pairingID"] == 1:
                     print("pass")
-                    value = package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["value"]
-                    locals()[str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])] =\
-                        Light(device,channel, displayname, value, inputchannel)
-                    print("pass")
-
+                    light_obj.append(make_light(sysap,device,channel,displayname,inputchannel))
 
 
 
@@ -78,15 +87,15 @@ for device in device_list:
 
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
             shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
-        
-        
+
+
         for inputchannels in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
             channel_names += str(' ' + package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannels]['value'] )
     channel_names += str(' \n')
     channel_names += str(' \n')
 
 
-#make txt file from channel names txt-file. Easier to watch with notepad
+# make txt file from channel names txt-file. Easier to watch with notepad
 with open('channel_names.txt','w', errors='ignore') as f:
     f.write(channel_names)
 
@@ -116,8 +125,19 @@ print(windscale_outside +" bft Outside(The Beaufort scale)")
 print(lights)
 print(shades)
 print(heating)
-for valo in lights:
-    print(locals()[valo].status())
+
+print(light_obj)
+i = 0
+for obj in light_obj:
+    print(str(i) + " ")
+    obj.status()
+    i+=1
+
+light_obj[0].light_on(sysap)
+
+time.sleep(5)
+
+light_obj[0].light_off(sysap)
 
 
 #Testing light on off
@@ -131,9 +151,7 @@ for valo in lights:
 #print("wait 5 sec")
 #time.sleep(5)
 #print("light off")
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password),data=light_off)
-
-
+# requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password),data=light_off)
 # Moving lights
 #livingroom
 #requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
@@ -154,4 +172,4 @@ for valo in lights:
 #requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
 #requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0000.idp0000',auth=(user, password), data=light_off)
 
-
+print("!!!!!!!!!!!!!!!!!! Ended succesfully !!!!!!!!!!!!!!!!!!!")
