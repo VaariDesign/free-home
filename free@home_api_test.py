@@ -29,11 +29,10 @@ lights = []
 shades = []
 heating = []
 
-#Add this seperate module
-#Login data for free@home: Settings---> Local API ---> Username
-user =  'Username'
-password = 'Password' #same as log in your free@home
-url = 'IP-Address'
+
+user = input_data.user
+password = input_data.password #same as log in your free@home
+url = input_data.url
 
 #Get configuration of the free@home system
 confiq = requests.get('http://'+url+'/fhapi/v1/api/rest/configuration',auth=(user, password))
