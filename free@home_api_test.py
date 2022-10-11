@@ -52,9 +52,12 @@ for device in device_list:
     channel_names += str(device +' '+ package_json[sysap]['devices'][str(device)]['displayName'])
     for channel in package_json[sysap]['devices'][str(device)]['channels']:
         channel_names += str(' \n'+channel+' '+ package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
-        
-        # adding to lists
-        if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
+        # Dont want unused names in list
+        if len(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']) <= 2:
+            print ("Too short device name: Less than 2 characters")
+            
+        # adding to lists if name is not too short
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
             lights.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
             displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
 
@@ -69,10 +72,10 @@ for device in device_list:
 
 
 
-        if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':
             heating.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
 
-        if package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
             shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
         
         
