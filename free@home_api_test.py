@@ -163,10 +163,15 @@ print(windscale_outside +" bft Outside(The Beaufort scale)")
 #print(light_obj[0].name)
 #print(heating_obj[0].name)
 
+#heating_obj[0].new_target("22.5")
+
 light_obj[0].light_on()
 
-time.sleep(2)
+time.sleep(5)
 
 light_obj[0].light_off()
+#heating_obj[0].new_target("23")
+
+
 
 print("!!!!!!!!!!!!!!!!!! Ended succesfully !!!!!!!!!!!!!!!!!!!")
