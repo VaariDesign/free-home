@@ -46,3 +46,9 @@ class Heating:
 
     def current_temperature(self):
         print("Current temperature in "+self.name + " is "+self.temperature)
+
+    def new_target(self,target):
+        print("Set target temperature in "+ self.name + " to "+target)
+        print(self.device + " "+self.channel + " "+self.inputchannel + " ")
+        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=target)
+
