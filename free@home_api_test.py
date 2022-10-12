@@ -82,13 +82,13 @@ for device in device_list:
 
 
 
-        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':  #23
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':  #23  "pairingID": 51, input
             heating.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
 
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
             shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
             
-            #pairing id 35 and 36
+            #pairing id 35 and 36 0-100
 
 
         for inputchannels in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
