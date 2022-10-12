@@ -70,9 +70,9 @@ for device in device_list:
 
         # adding to lists if name is not too short
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
-            light_name1 = (str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
-            light_name = light_name1.replace(" ","_")
-            lights.append(light_name)
+            light_name1 = (str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])) #no need
+            light_name = light_name1.replace(" ","_") #no need
+            lights.append(light_name) #no need
             displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
 
             for inputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
@@ -82,11 +82,13 @@ for device in device_list:
 
 
 
-        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':  #23
             heating.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
 
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
             shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            
+            #pairing id 35 and 36
 
 
         for inputchannels in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
