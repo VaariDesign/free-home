@@ -4,6 +4,7 @@ import json
 import input_data
 
 from classes import Light
+from classes import Heating
 
 import time
 
@@ -28,18 +29,29 @@ def make_light(sysap,device,channel,displayname,inputchannel):
     value = package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["value"]
     name =str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
     variable_name = name.replace(" ","_")
-    print(variable_name)
-    locals()[variable_name] = Light(device,channel, displayname, value, inputchannel)
+    locals()[variable_name] = Light(sysap,device,channel, displayname, value, inputchannel)
     locals()[variable_name].status()
     return locals()[variable_name]
-    print("pass")
+
+def make_heating(sysap,device,channel,displayname,inputchannel, outputchannel, temperature_channel):
+    target = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["value"]
+    temperature = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][temperature_channel]["value"]
+    name =str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
+    variable_name = name.replace(" ","_")
+    #print(variable_name)
+    locals()[variable_name] = Heating(sysap,device,channel, displayname, target, inputchannel,outputchannel, temperature_channel,temperature)
+    locals()[variable_name].current_temperature()
+    locals()[variable_name].target_temperature()
+    return locals()[variable_name]
 
 
 
 lights = []
 light_obj = []
 shades = []
+shades_obj = []
 heating = []
+heating_obj = []
 
 
 user = input_data.user
@@ -66,29 +78,43 @@ for device in device_list:
         channel_names += str(' \n'+channel+' '+ package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
         # Dont want unused names in list
         if len(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']) <= 2:
-            print ("Too short device name: Less than 2 characters")
+            print("Too short device name: Less than 2 characters")
 
-        # adding to lists if name is not too short
+        # Lights
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
-            light_name1 = (str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])) #no need
-            light_name = light_name1.replace(" ","_") #no need
-            lights.append(light_name) #no need
+            light_name1 = (str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            light_name = light_name1.replace(" ","_")
+            lights.append(light_name)
             displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
 
             for inputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["pairingID"] == 1:
-                    print("pass")
                     light_obj.append(make_light(sysap,device,channel,displayname,inputchannel))
 
 
-
-        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '27':  #23  "pairingID": 51, input
+        # Heating
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '23':
             heating.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            heat_name1 = (str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            heat_name = heat_name1.replace(" ","_")
+            heating.append(heat_name)
+            displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
+
+            # Find input channel to find where we can give inputs
+            for inputchannel_look in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel_look]["pairingID"] == 51:
+                    inputchannel = inputchannel_look
+
+            for outputchannel_look in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel_look]["pairingID"] == 51:
+                    outputchannel = outputchannel_look
+
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel_look]["pairingID"] == 304:
+                    temperature_channel = outputchannel_look
+            heating_obj.append(make_heating(sysap, device, channel, displayname, inputchannel, outputchannel, temperature_channel))
 
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
             shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
-            
-            #pairing id 35 and 36 0-100
 
 
         for inputchannels in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
@@ -124,54 +150,23 @@ print(wind_outside +" m/s Outside")
 print(windscale_outside +" bft Outside(The Beaufort scale)")
 
 
-print(lights)
-print(shades)
-print(heating)
+#print(lights)
+#print(shades)
+#print(heating)
 
-print(light_obj)
-i = 0
-for obj in light_obj:
-    print(str(i) + " ")
-    obj.status()
-    i+=1
+#print(len(light_obj))
+#i = 0
+#for obj in light_obj:
+#    print(str(i) + " ")
+#    obj.status()
+#    i+=1
+#print(light_obj[0].name)
+#print(heating_obj[0].name)
 
-light_obj[0].light_on(sysap)
+light_obj[0].light_on()
 
-time.sleep(5)
+time.sleep(2)
 
-light_obj[0].light_off(sysap)
-
-
-#Testing light on off
-#light_on = "1"
-#light_off = "0"
-
-#print("test wohnen light")
-
-#print("Light on")
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
-#print("wait 5 sec")
-#time.sleep(5)
-#print("light off")
-# requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password),data=light_off)
-# Moving lights
-#livingroom
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
-#dining
-#time.sleep(1)
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_off)
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0002.idp0000',auth=(user, password), data=light_on)
-#kitchen
-#time.sleep(1)
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22F603D51.ch0000.idp0000',auth=(user, password), data=light_on)
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0002.idp0000',auth=(user, password), data=light_off)
-#flur
-#time.sleep(1)
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0000.idp0000',auth=(user, password), data=light_on)
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22F603D51.ch0000.idp0000',auth=(user, password), data=light_off)
-#wohnen
-#time.sleep(1)
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0003.idp0000',auth=(user, password), data=light_on)
-#requests.put('http://'+url+'/fhapi/v1/api/rest/datapoint/00000000-0000-0000-0000-000000000000/ABB22D573D51.ch0000.idp0000',auth=(user, password), data=light_off)
+light_obj[0].light_off()
 
 print("!!!!!!!!!!!!!!!!!! Ended succesfully !!!!!!!!!!!!!!!!!!!")
