@@ -5,12 +5,12 @@ import input_data
 
 from classes import Light
 from classes import Heating
+from classes import Shade
 
 import time
 
 
-
-def get_devices(url,user,password,sysap):
+def get_devices(url, user, password, sysap):
     """
     :param url: IP-adrress of system accesspoint free@home
     :param user: Username free@home
@@ -25,13 +25,14 @@ def get_devices(url,user,password,sysap):
     device_list = devices.json()[sysap]
     return device_list
 
+
 def make_light(sysap,device,channel,displayname,inputchannel):
     value = package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["value"]
     name =str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
     variable_name = name.replace(" ","_")
     locals()[variable_name] = Light(sysap,device,channel, displayname, value, inputchannel)
-    locals()[variable_name].status()
     return locals()[variable_name]
+
 
 def make_heating(sysap,device,channel,displayname,inputchannel, outputchannel, temperature_channel):
     target = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["value"]
@@ -40,8 +41,17 @@ def make_heating(sysap,device,channel,displayname,inputchannel, outputchannel, t
     variable_name = name.replace(" ","_")
     #print(variable_name)
     locals()[variable_name] = Heating(sysap,device,channel, displayname, target, inputchannel,outputchannel, temperature_channel,temperature)
-    locals()[variable_name].current_temperature()
-    locals()[variable_name].target_temperature()
+    return locals()[variable_name]
+
+
+def make_shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang):
+    position = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][output_pos]["value"]
+    angle = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][output_ang]["value"]
+    name =str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
+    variable_name = name.replace(" ","_")
+    print(variable_name)
+    locals()[variable_name] = Shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang, position, angle)
+    locals()[variable_name].status()
     return locals()[variable_name]
 
 
@@ -59,7 +69,7 @@ password = input_data.password #same as log in your free@home
 url = input_data.url
 
 #Get configuration of the free@home system
-confiq = requests.get('http://'+url+'/fhapi/v1/api/rest/configuration',auth=(user, password))
+confiq = requests.get('http://'+url+'/fhapi/v1/api/rest/configuration', auth=(user, password))
 package_json = confiq.json() #Turn data to json
 package_str = json.dumps(package_json, indent=2)
 
@@ -94,7 +104,6 @@ for device in device_list:
 
         # Heating
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '23':
-            heating.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
             heat_name1 = (str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
             heat_name = heat_name1.replace(" ","_")
             heating.append(heat_name)
@@ -111,10 +120,36 @@ for device in device_list:
 
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel_look]["pairingID"] == 304:
                     temperature_channel = outputchannel_look
-            heating_obj.append(make_heating(sysap, device, channel, displayname, inputchannel, outputchannel, temperature_channel))
+            heating_obj.append(make_heating(sysap,device,channel,displayname,inputchannel, outputchannel, temperature_channel))
 
+
+        # Shades / Blinds
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
-            shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])) #look in 35 36 out 288/289
+            shade_name1 = (str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            shade_name = shade_name1.replace(" ","_")
+            shades.append(shade_name)
+            displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
+
+            for inputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["pairingID"] == 35:
+                    input_pos = inputchannel
+
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["pairingID"] == 36:
+                    input_ang = inputchannel
+
+            for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 289:
+                    output_pos = outputchannel
+
+
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 290:
+                    output_ang = outputchannel
+
+
+
+            shades_obj.append(make_shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang))
+
+
 
 
         for inputchannels in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
@@ -163,14 +198,21 @@ print(windscale_outside +" bft Outside(The Beaufort scale)")
 #print(light_obj[0].name)
 #print(heating_obj[0].name)
 
-#heating_obj[0].new_target("22.5")
-
-light_obj[0].light_on()
-
-time.sleep(5)
-
-light_obj[0].light_off()
 #heating_obj[0].new_target("23")
+
+#light_obj[0].light_on()
+print("Testi")
+print(len(shades_obj))
+print(shades_obj[1].name)
+print(shades_obj[1].position)
+
+shades_obj[1].move_position("100")
+
+time.sleep(3)
+
+shades_obj[1].move_angle("100")
+#light_obj[0].light_off()
+#heating_obj[0].new_target("22")
 
 
 
