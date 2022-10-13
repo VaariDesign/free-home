@@ -12,3 +12,8 @@ https://developer.eu.mybuildings.abb.com/fah_cloud/reference/functionids/
 PairingIDs
 
 https://developer.eu.mybuildings.abb.com/fah_cloud/reference/pairingids/
+
+Samples
+
+https://developer.eu.mybuildings.abb.com/fah_cloud/samples/
+
