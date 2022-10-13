@@ -4,28 +4,28 @@ ch0000 SysAP 0
 FFFF4A000001 Time program actuator 
 ch0000 Time program actuator 0 
  
-ABB7F597B58E Wohnen Oben 
-ch0000 Wohnen Oben 0 0 0 0 0 0 0 0 0 0 0 0 0 
-ch0003 Wohnen Oben 1 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597B58E Livingroom1 switch 
+ch0000 Livingroom1 switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
+ch0003 Livingroom1 switch 1 1 0 0 0 0 0 0 0 0 0 0 0 
  
 ABB2C55D3D51 Heating actuator, 6gang, MDRC 
-ch0000 Wohnen 0 0 0 
-ch0001 Zimmer1 0 0 0 
-ch0002 Bad 0 0 0 
+ch0000 Livingroom heating 0 0 0 
+ch0001 Bedroom heating 0 0 0 
+ch0002 Bathroom heating 0 0 0 
 ch0003  0 0 0 
 ch0004  0 0 0 
 ch0005  0 0 0 
  
-ABB7F597B828 Küche 
-ch0000 Küche 0 0 0 0 0 0 0 0 0 0 0 0 0 
-ch0003 Küche 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597B828 Kitchen switch 
+ch0000 Kitchen switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
+ch0003 Kitchen switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
-ABB7F597C859 Flur bei Bad 
-ch0000 Flur bei Bad 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597C859 Floor switch for bathroom 
+ch0000 Floor switch for bathroom 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
-ABB7F597B84F Wohnen Mitte 
-ch0000 Wohnen Mitte 1 0 0 0 0 0 0 0 0 0 0 0 0 
-ch0003 Wohnen Mitte 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597B84F Livingroom2 switch 
+ch0000 Livingroom2 switch 1 1 0 0 0 0 0 0 0 0 0 0 0 
+ch0003 Livingroom2 switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
 ABB7F62C12CA SysAP communication interface 
  
@@ -35,27 +35,27 @@ ch0000 All blinds open
 ABB7F62C12CB SysAP communication interface 
  
 ABB22F603D51 Switch actuator, 4gang, 16 A, MDRC 
-ch0000 Licht Küche 0 0 0 0 0 0 0 0 0 
-ch0001 Licht Zimmer1 0 0 0 0 0 0 0 0 0 
-ch0002 Licht Bad Decke 0 0 0 0 0 0 0 0 0 
-ch0003 Licht Bad Spiegel 0 0 0 0 0 0 0 0 0 
+ch0000 Light Kitchen 0 0 0 0 0 0 0 0 0 
+ch0001 Light Bedroom 0 0 0 0 0 0 0 0 0 
+ch0002 Light Bathroom 0 0 0 0 0 0 0 0 0 
+ch0003 Light Bathroom mirror 0 0 0 0 0 0 0 0 0 
  
-ABB7F597B82F Essen Unten 
-ch0000 Essen Unten 1 0 0 0 0 0 0 0 0 0 0 0 0 
-ch0003 Essen Unten 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597B82F Livingroom4 switch 
+ch0000 Livingroom4 switch 1 1 0 0 0 0 0 0 0 0 0 0 0 
+ch0003 Livingroom4 switch 1 1 0 0 0 0 0 0 0 0 0 0 0 
  
 FFFF4A010003 Storm 
 ch0000 Storm 0 
  
-ABB7F597AE14 Wohnen 
-ch0000 Wohnen 0 0 0 0 0 0 0 0 0 invalid invalid 0 0 0 0 invalid 0 0 0 0 0 0 22 0 invalid 0 0 
+ABB7F597AE14 Livingroom controller 
+ch0000 Livingroom controller 0 0 0 0 0 0 0 0 0 23 invalid 0 0 0 0 invalid 0 0 1 0 0 0 22 1 invalid 0 0 
  
 FFFF4A010006 Morning 
 ch0000 Morning 0 
  
-ABB7F597B8A3 Bad 
-ch0000 Bad 0 0 0 0 0 0 0 0 0 0 0 0 0 
-ch0003 Bad 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597B8A3 Bathroom switch 
+ch0000 Bathroom switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
+ch0003 Bathroom switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
 FFFF4A010007 Evening 
 ch0000 Evening 0 
@@ -63,42 +63,42 @@ ch0000 Evening 0
 FFFF48040001 All blinds closed 
 ch0000 All blinds closed 
  
-ABB7F597AD39 Zimmer1 
-ch0000 Zimmer1 0 0 0 0 0 0 0 0 0 invalid invalid 0 0 0 0 invalid 0 0 1 0 0 0 22 0 invalid 0 0 
+ABB7F597AD39 Bedroom controller 
+ch0000 Bedroom controller 0 0 0 0 0 0 0 0 0 invalid invalid 0 0 0 0 invalid 0 0 1 0 0 0 23 1 invalid 0 0 
  
-ABB7F597B551 Zimmer1 
-ch0000 Zimmer1 0 0 0 0 0 0 0 0 0 0 0 0 0 
-ch0003 Zimmer1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597B551 Bedroom switch 
+ch0000 Bedroom switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
+ch0003 Bedroom switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
 FFFF48000001 Lights on 
 ch0000 Lights on 
  
 ABB7F4FC49BF HWR 
-ch0000 HWR 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ch0000 HWR 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
-ED0100003361 Haus B Dach 
-ch0000 Haus B Dach 
-ch0001 Haus B Dach 
-ch0002 Haus B Dach 
-ch0003 Haus B Dach 
+ED0100003361 Weather station 
+ch0000 Weather station 
+ch0001 Weather station 
+ch0002 Weather station 
+ch0003 Weather station 
  
-ABB7F597AD18 Bad 
-ch0000 Bad 0 0 0 0 0 0 0 0 0 invalid invalid 0 0 0 0 invalid 0 0 1 0 0 0 22 0 invalid 0 0 
+ABB7F597AD18 Bathroom contorller 
+ch0000 Bathroom contorller 0 0 0 0 0 0 0 0 0 invalid invalid 0 0 0 0 invalid 0 0 1 0 0 0 23 1 invalid 0 0 
  
 ABB22D573D51 Switch actuator, 4gang, 16 A, MDRC 
-ch0000 Licht Flur 0 0 0 0 0 0 0 0 0 
-ch0001 Licht HWR 0 0 0 0 0 0 0 0 0 
-ch0002 Licht Essen 0 0 0 0 0 0 0 0 0 
-ch0003 Licht Wohnen 1 0 0 0 0 0 0 0 0 
+ch0000 Light floor 0 0 0 0 0 0 0 0 0 
+ch0001 Light Hobby 0 0 0 0 0 0 0 0 0 
+ch0002 Light livingroom table 1 0 0 0 0 0 0 0 0 
+ch0003 Light livingroom 1 0 0 0 0 0 0 0 0 
  
 ABB23F603D51 Switch actuator, 4gang, 16 A, MDRC 
-ch0000 Steckdose Wohnen 1 1 0 0 0 0 0 0 0 
-ch0001 Steckdose Küche 0 0 0 0 0 0 0 0 0 
-ch0002 Steckdose Terasse 0 0 0 0 0 0 0 0 0 
+ch0000 Livingroom Socket 1 1 0 0 0 0 0 0 0 
+ch0001 Light kitchen worktop 0 0 0 0 0 0 0 0 0 
+ch0002 Socket Terrace 0 0 0 0 0 0 0 0 0 
 ch0003  0 0 0 0 0 0 0 0 0 
  
 ABB27E603D51 Switch actuator, 4gang, 16 A, MDRC 
-ch0000 Licht Balkon 0 0 0 0 0 0 0 0 0 
+ch0000 Light Terasse 0 0 0 0 0 0 0 0 0 
 ch0001  0 0 0 0 0 0 0 0 0 
 ch0002  0 0 0 0 0 0 0 0 0 
 ch0003  0 0 0 0 0 0 0 0 0 
@@ -106,27 +106,27 @@ ch0003  0 0 0 0 0 0 0 0 0
 FFFF48010001 Panic scene 
 ch0000 Panic scene 
  
-ABB7F597E40A Wohnen/Küche Unten 
-ch0000 Wohnen/Küche Unten 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597E40A Livingroom3 switch 
+ch0000 Livingroom3 switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
 ABB226983A51 Blind actuator, 4gang, MDRC 
-ch0000 Jalousie Balkontüre 0 0 57 100 0 0 0 0 2 0 
-ch0001 Jalousie Wohnen 1 0 100 100 0 0 0 0 2 0 
-ch0002 Jalousie Zimmer1 1 0 100 100 0 0 0 0 2 0 
+ch0000 Shade Terrace 1 0 74 61 0 0 0 0 2 0 
+ch0001 Shade Livingroom 1 0 100 5 0 0 0 0 2 0 
+ch0002 Shade Bedroom 1 0 100 100 0 0 0 0 2 0 
 ch0003  0 0 0 0 0 0 0 0 0 0 
  
-ABB7F597E40C Flur bei Wohnen 
-ch0000 Flur bei Wohnen 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597E40C Floor switch livingroom 
+ch0000 Floor switch livingroom 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
-ABB7F597B55E Essen Oben 
-ch0000 Essen Oben 0 0 0 0 0 0 0 0 0 0 0 0 0 
-ch0003 Essen Oben 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597B55E Livingroom5 switch 
+ch0000 Livingroom5 switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
+ch0003 Livingroom5 switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
-ABB7F597CA9E Flur Eingang 
-ch0000 Flur Eingang 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597CA9E Floor switch 
+ch0000 Floor switch 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
-ABB7F597E3C7 Zimmer1 Bett 
-ch0000 Zimmer1 Bett 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ABB7F597E3C7 Bedroom switch bed 
+ch0000 Bedroom switch bed 0 1 0 0 0 0 0 0 0 0 0 0 0 
  
 FFFF48020001 All off 
 ch0000 All off 
