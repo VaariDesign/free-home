@@ -52,3 +52,28 @@ class Heating:
         print(self.device + " "+self.channel + " "+self.inputchannel + " ")
         requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=target)
 
+class Shade:
+    def __init__(self, sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang, position, angle):
+        self.sysap = sysap
+        self.device = device
+        self.channel = channel
+        self.name = displayname
+        self.input_pos = input_pos
+        self.input_ang = input_ang
+        self.output_pos = output_pos
+        self.output_ang = output_ang
+        self.position = position
+        self.angle = angle
+
+
+    def status(self):
+        print(self.name +" is "+ self.position + "% down and angle of shades are " + self.angle)
+
+
+    def move_position(self, position):
+        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.input_pos, auth=(input_data.user, input_data.password), data=str(position))
+
+
+    def move_angle(self, angle):
+        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.input_ang, auth=(input_data.user, input_data.password), data=angle)
+
