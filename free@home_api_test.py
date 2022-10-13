@@ -102,7 +102,7 @@ for device in device_list:
 
             # Find input channel to find where we can give inputs
             for inputchannel_look in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
-                if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel_look]["pairingID"] == 51:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel_look]["pairingID"] == 320:
                     inputchannel = inputchannel_look
 
             for outputchannel_look in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
@@ -114,7 +114,7 @@ for device in device_list:
             heating_obj.append(make_heating(sysap, device, channel, displayname, inputchannel, outputchannel, temperature_channel))
 
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
-            shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']))
+            shades.append(str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])) #look in 35 36 out 288/289
 
 
         for inputchannels in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
