@@ -20,7 +20,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               }
             }
           }
@@ -52,11 +52,11 @@
         "floor": "01",
         "room": "01",
         "interface": "TP",
-        "displayName": "Wohnen Oben",
+        "displayName": "Livingroom1 switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Wohnen Oben",
+            "displayName": "Livingroom1 switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -65,7 +65,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -184,7 +184,7 @@
             }
           },
           "ch0003": {
-            "displayName": "Wohnen Oben",
+            "displayName": "Livingroom1 switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -193,7 +193,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -243,7 +243,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 1,
-                "value": "0"
+                "value": "1"
               },
               "odp0001": {
                 "pairingID": 16,
@@ -321,7 +321,7 @@
           "ch0000": {
             "floor": "01",
             "room": "01",
-            "displayName": "Wohnen",
+            "displayName": "Livingroom heating",
             "functionID": "27",
             "inputs": {
               "idp0000": {
@@ -355,7 +355,7 @@
           "ch0001": {
             "floor": "01",
             "room": "03",
-            "displayName": "Zimmer1",
+            "displayName": "Bedroom heating",
             "functionID": "27",
             "inputs": {
               "idp0000": {
@@ -389,7 +389,7 @@
           "ch0002": {
             "floor": "01",
             "room": "04",
-            "displayName": "Bad",
+            "displayName": "Bathroom heating",
             "functionID": "27",
             "inputs": {
               "idp0000": {
@@ -522,11 +522,11 @@
         "floor": "01",
         "room": "01",
         "interface": "TP",
-        "displayName": "K\u00fcche",
+        "displayName": "Kitchen switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "K\u00fcche",
+            "displayName": "Kitchen switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -535,7 +535,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -654,7 +654,7 @@
             }
           },
           "ch0003": {
-            "displayName": "K\u00fcche",
+            "displayName": "Kitchen switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -663,7 +663,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -787,11 +787,11 @@
         "floor": "01",
         "room": "02",
         "interface": "TP",
-        "displayName": "Flur bei Bad",
+        "displayName": "Floor switch for bathroom",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Flur bei Bad",
+            "displayName": "Floor switch for bathroom",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -800,7 +800,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -850,7 +850,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 1,
-                "value": "0"
+                "value": "1"
               },
               "odp0001": {
                 "pairingID": 16,
@@ -924,11 +924,11 @@
         "floor": "01",
         "room": "01",
         "interface": "TP",
-        "displayName": "Wohnen Mitte",
+        "displayName": "Livingroom2 switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Wohnen Mitte",
+            "displayName": "Livingroom2 switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -937,7 +937,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -1056,7 +1056,7 @@
             }
           },
           "ch0003": {
-            "displayName": "Wohnen Mitte",
+            "displayName": "Livingroom2 switch",
             "functionID": "3",
             "inputs": {
               "idp0000": {
@@ -1065,7 +1065,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -1123,7 +1123,7 @@
               },
               "odp0002": {
                 "pairingID": 32,
-                "value": "0"
+                "value": "1"
               },
               "odp0003": {
                 "pairingID": 33,
@@ -1222,7 +1222,7 @@
           "ch0000": {
             "floor": "01",
             "room": "01",
-            "displayName": "Licht K\u00fcche",
+            "displayName": "Light Kitchen",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -1296,7 +1296,7 @@
           "ch0001": {
             "floor": "01",
             "room": "03",
-            "displayName": "Licht Zimmer1",
+            "displayName": "Light Bedroom",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -1370,7 +1370,7 @@
           "ch0002": {
             "floor": "01",
             "room": "04",
-            "displayName": "Licht Bad Decke",
+            "displayName": "Light Bathroom",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -1444,7 +1444,7 @@
           "ch0003": {
             "floor": "01",
             "room": "04",
-            "displayName": "Licht Bad Spiegel",
+            "displayName": "Light Bathroom mirror",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -1521,11 +1521,11 @@
         "floor": "01",
         "room": "01",
         "interface": "TP",
-        "displayName": "Essen Unten",
+        "displayName": "Livingroom4 switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Essen Unten",
+            "displayName": "Livingroom4 switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -1534,7 +1534,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -1584,7 +1584,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 1,
-                "value": "1"
+                "value": "0"
               },
               "odp0001": {
                 "pairingID": 16,
@@ -1653,16 +1653,16 @@
             }
           },
           "ch0003": {
-            "displayName": "Essen Unten",
+            "displayName": "Livingroom4 switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
                 "pairingID": 256,
-                "value": "0"
+                "value": "1"
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -1712,7 +1712,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 1,
-                "value": "0"
+                "value": "1"
               },
               "odp0001": {
                 "pairingID": 16,
@@ -1808,11 +1808,11 @@
         "floor": "01",
         "room": "01",
         "interface": "TP",
-        "displayName": "Wohnen",
+        "displayName": "Livingroom controller",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Wohnen",
+            "displayName": "Livingroom controller",
             "functionID": "23",
             "inputs": {
               "idp0000": {
@@ -1853,7 +1853,7 @@
               },
               "idp0009": {
                 "pairingID": 51,
-                "value": "invalid"
+                "value": "23"
               },
               "idp000a": {
                 "pairingID": 52,
@@ -1889,7 +1889,7 @@
               },
               "idp0012": {
                 "pairingID": 66,
-                "value": "0"
+                "value": "1"
               },
               "idp0013": {
                 "pairingID": 7,
@@ -1909,7 +1909,7 @@
               },
               "idp0017": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0018": {
                 "pairingID": 304,
@@ -1951,11 +1951,11 @@
               },
               "odp0006": {
                 "pairingID": 51,
-                "value": "20"
+                "value": "22"
               },
               "odp0007": {
                 "pairingID": 52,
-                "value": "-1"
+                "value": "1"
               },
               "odp0008": {
                 "pairingID": 56,
@@ -1991,7 +1991,7 @@
               },
               "odp0010": {
                 "pairingID": 304,
-                "value": "24.54"
+                "value": "22.4"
               },
               "odp0011": {
                 "pairingID": 331,
@@ -2039,11 +2039,11 @@
         "floor": "01",
         "room": "04",
         "interface": "TP",
-        "displayName": "Bad",
+        "displayName": "Bathroom switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Bad",
+            "displayName": "Bathroom switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -2052,7 +2052,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -2171,7 +2171,7 @@
             }
           },
           "ch0003": {
-            "displayName": "Bad",
+            "displayName": "Bathroom switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -2180,7 +2180,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -2345,11 +2345,11 @@
         "floor": "01",
         "room": "03",
         "interface": "TP",
-        "displayName": "Zimmer1",
+        "displayName": "Bedroom controller",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Zimmer1",
+            "displayName": "Bedroom controller",
             "functionID": "23",
             "inputs": {
               "idp0000": {
@@ -2442,11 +2442,11 @@
               },
               "idp0016": {
                 "pairingID": 320,
-                "value": "22"
+                "value": "23"
               },
               "idp0017": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0018": {
                 "pairingID": 304,
@@ -2488,11 +2488,11 @@
               },
               "odp0006": {
                 "pairingID": 51,
-                "value": "20"
+                "value": "21.5"
               },
               "odp0007": {
                 "pairingID": 52,
-                "value": "-1"
+                "value": "0.5"
               },
               "odp0008": {
                 "pairingID": 56,
@@ -2528,7 +2528,7 @@
               },
               "odp0010": {
                 "pairingID": 304,
-                "value": "23.82"
+                "value": "21.64"
               },
               "odp0011": {
                 "pairingID": 331,
@@ -2554,11 +2554,11 @@
         "floor": "01",
         "room": "03",
         "interface": "TP",
-        "displayName": "Zimmer1",
+        "displayName": "Bedroom switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Zimmer1",
+            "displayName": "Bedroom switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -2567,7 +2567,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -2686,7 +2686,7 @@
             }
           },
           "ch0003": {
-            "displayName": "Zimmer1",
+            "displayName": "Bedroom switch",
             "functionID": "3",
             "inputs": {
               "idp0000": {
@@ -2695,7 +2695,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -2851,7 +2851,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -2975,21 +2975,21 @@
         "floor": "01",
         "nativeId": "13153",
         "room": "06",
-        "displayName": "Haus B Dach",
+        "displayName": "Weather station",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Haus B Dach",
+            "displayName": "Weather station",
             "functionID": "41",
             "inputs": {},
             "outputs": {
               "odp0000": {
                 "pairingID": 1026,
-                "value": "1"
+                "value": "0"
               },
               "odp0001": {
                 "pairingID": 1027,
-                "value": "3054.08"
+                "value": "1.4"
               },
               "odp0002": {
                 "pairingID": 4,
@@ -2998,7 +2998,7 @@
             }
           },
           "ch0001": {
-            "displayName": "Haus B Dach",
+            "displayName": "Weather station",
             "functionID": "42",
             "inputs": {},
             "outputs": {
@@ -3021,7 +3021,7 @@
             }
           },
           "ch0002": {
-            "displayName": "Haus B Dach",
+            "displayName": "Weather station",
             "functionID": "43",
             "inputs": {},
             "outputs": {
@@ -3031,7 +3031,7 @@
               },
               "odp0001": {
                 "pairingID": 1024,
-                "value": "26.1"
+                "value": "14.35"
               },
               "odp0002": {
                 "pairingID": 4,
@@ -3040,7 +3040,7 @@
             }
           },
           "ch0003": {
-            "displayName": "Haus B Dach",
+            "displayName": "Weather station",
             "functionID": "44",
             "inputs": {},
             "outputs": {
@@ -3068,11 +3068,11 @@
         "floor": "01",
         "room": "04",
         "interface": "TP",
-        "displayName": "Bad",
+        "displayName": "Bathroom contorller",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Bad",
+            "displayName": "Bathroom contorller",
             "functionID": "23",
             "inputs": {
               "idp0000": {
@@ -3165,11 +3165,11 @@
               },
               "idp0016": {
                 "pairingID": 320,
-                "value": "22"
+                "value": "23"
               },
               "idp0017": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0018": {
                 "pairingID": 304,
@@ -3211,11 +3211,11 @@
               },
               "odp0006": {
                 "pairingID": 51,
-                "value": "20.5"
+                "value": "22"
               },
               "odp0007": {
                 "pairingID": 52,
-                "value": "-0.5"
+                "value": "1"
               },
               "odp0008": {
                 "pairingID": 56,
@@ -3251,7 +3251,7 @@
               },
               "odp0010": {
                 "pairingID": 304,
-                "value": "23.74"
+                "value": "22.2"
               },
               "odp0011": {
                 "pairingID": 331,
@@ -3281,7 +3281,7 @@
           "ch0000": {
             "floor": "01",
             "room": "02",
-            "displayName": "Licht Flur",
+            "displayName": "Light floor",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -3355,7 +3355,7 @@
           "ch0001": {
             "floor": "01",
             "room": "05",
-            "displayName": "Licht HWR",
+            "displayName": "Light Hobby",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -3429,12 +3429,12 @@
           "ch0002": {
             "floor": "01",
             "room": "01",
-            "displayName": "Licht Essen",
+            "displayName": "Light livingroom table",
             "functionID": "7",
             "inputs": {
               "idp0000": {
                 "pairingID": 1,
-                "value": "0"
+                "value": "1"
               },
               "idp0001": {
                 "pairingID": 2,
@@ -3472,7 +3472,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 256,
-                "value": "0"
+                "value": "1"
               },
               "odp0001": {
                 "pairingID": 257,
@@ -3503,7 +3503,7 @@
           "ch0003": {
             "floor": "01",
             "room": "01",
-            "displayName": "Licht Wohnen",
+            "displayName": "Light livingroom",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -3584,7 +3584,7 @@
           "ch0000": {
             "floor": "01",
             "room": "01",
-            "displayName": "Steckdose Wohnen",
+            "displayName": "Livingroom Socket",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -3658,7 +3658,7 @@
           "ch0001": {
             "floor": "01",
             "room": "01",
-            "displayName": "Steckdose K\u00fcche",
+            "displayName": "Light kitchen worktop",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -3732,7 +3732,7 @@
           "ch0002": {
             "floor": "01",
             "room": "06",
-            "displayName": "Steckdose Terasse",
+            "displayName": "Socket Terrace",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -3885,7 +3885,7 @@
           "ch0000": {
             "floor": "01",
             "room": "06",
-            "displayName": "Licht Balkon",
+            "displayName": "Light Terasse",
             "functionID": "7",
             "inputs": {
               "idp0000": {
@@ -4197,11 +4197,11 @@
         "floor": "01",
         "room": "01",
         "interface": "TP",
-        "displayName": "Wohnen/K\u00fcche Unten",
+        "displayName": "Livingroom3 switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Wohnen/K\u00fcche Unten",
+            "displayName": "Livingroom3 switch",
             "functionID": "3",
             "inputs": {
               "idp0000": {
@@ -4210,7 +4210,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -4338,12 +4338,12 @@
           "ch0000": {
             "floor": "01",
             "room": "01",
-            "displayName": "Jalousie Balkont\u00fcre",
+            "displayName": "Shade Terrace",
             "functionID": "9",
             "inputs": {
               "idp0000": {
                 "pairingID": 32,
-                "value": "0"
+                "value": "1"
               },
               "idp0001": {
                 "pairingID": 33,
@@ -4351,11 +4351,11 @@
               },
               "idp0002": {
                 "pairingID": 35,
-                "value": "57"
+                "value": "74"
               },
               "idp0003": {
                 "pairingID": 36,
-                "value": "100"
+                "value": "61"
               },
               "idp0004": {
                 "pairingID": 40,
@@ -4385,7 +4385,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 288,
-                "value": "0"
+                "value": "1"
               },
               "odp0001": {
                 "pairingID": 289,
@@ -4393,7 +4393,7 @@
               },
               "odp0002": {
                 "pairingID": 290,
-                "value": "60"
+                "value": "100"
               },
               "odp0003": {
                 "pairingID": 273,
@@ -4408,7 +4408,7 @@
           "ch0001": {
             "floor": "01",
             "room": "01",
-            "displayName": "Jalousie Wohnen",
+            "displayName": "Shade Livingroom",
             "functionID": "9",
             "inputs": {
               "idp0000": {
@@ -4425,7 +4425,7 @@
               },
               "idp0003": {
                 "pairingID": 36,
-                "value": "100"
+                "value": "5"
               },
               "idp0004": {
                 "pairingID": 40,
@@ -4463,7 +4463,7 @@
               },
               "odp0002": {
                 "pairingID": 290,
-                "value": "57"
+                "value": "5"
               },
               "odp0003": {
                 "pairingID": 273,
@@ -4478,7 +4478,7 @@
           "ch0002": {
             "floor": "01",
             "room": "03",
-            "displayName": "Jalousie Zimmer1",
+            "displayName": "Shade Bedroom",
             "functionID": "9",
             "inputs": {
               "idp0000": {
@@ -4619,11 +4619,11 @@
         "floor": "01",
         "room": "02",
         "interface": "TP",
-        "displayName": "Flur bei Wohnen",
+        "displayName": "Floor switch livingroom",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Flur bei Wohnen",
+            "displayName": "Floor switch livingroom",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -4632,7 +4632,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -4682,7 +4682,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 1,
-                "value": "1"
+                "value": "0"
               },
               "odp0001": {
                 "pairingID": 16,
@@ -4756,11 +4756,11 @@
         "floor": "01",
         "room": "01",
         "interface": "TP",
-        "displayName": "Essen Oben",
+        "displayName": "Livingroom5 switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Essen Oben",
+            "displayName": "Livingroom5 switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -4769,7 +4769,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -4888,7 +4888,7 @@
             }
           },
           "ch0003": {
-            "displayName": "Essen Oben",
+            "displayName": "Livingroom5 switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -4897,7 +4897,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -5021,11 +5021,11 @@
         "floor": "01",
         "room": "02",
         "interface": "TP",
-        "displayName": "Flur Eingang",
+        "displayName": "Floor switch",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Flur Eingang",
+            "displayName": "Floor switch",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -5034,7 +5034,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -5084,7 +5084,7 @@
             "outputs": {
               "odp0000": {
                 "pairingID": 1,
-                "value": "0"
+                "value": "1"
               },
               "odp0001": {
                 "pairingID": 16,
@@ -5158,11 +5158,11 @@
         "floor": "01",
         "room": "03",
         "interface": "TP",
-        "displayName": "Zimmer1 Bett",
+        "displayName": "Bedroom switch bed",
         "unresponsive": false,
         "channels": {
           "ch0000": {
-            "displayName": "Zimmer1 Bett",
+            "displayName": "Bedroom switch bed",
             "functionID": "0",
             "inputs": {
               "idp0000": {
@@ -5171,7 +5171,7 @@
               },
               "idp0001": {
                 "pairingID": 18,
-                "value": "0"
+                "value": "1"
               },
               "idp0002": {
                 "pairingID": 273,
@@ -5318,19 +5318,19 @@
           "name": "H B / EG / W17",
           "rooms": {
             "01": {
-              "name": "Wohnen/K\u00fcche"
+              "name": "Livingroom"
             },
             "02": {
-              "name": "Flur"
+              "name": "Floor"
             },
             "03": {
-              "name": "BettZimmer1"
+              "name": "Bedroom"
             },
             "04": {
-              "name": "Bad"
+              "name": "Bathroom"
             },
             "05": {
-              "name": "HWR"
+              "name": "Hobbyroom"
             },
             "06": {
               "name": "Terasse"
