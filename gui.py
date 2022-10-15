@@ -87,18 +87,21 @@ frame4.place(x=lights_x, y=lights_y)
 
 
 # Shade buttons
+x1 = shade_width/(len(test_shade)+1)
+d = {}
+i = 0
 for shade in test_shade:
-    scale = ttk.Scale(root, from_=0, to=100, variable=g, command=scale)
-    scale.place(x=80, y=620)
-
+    d["scale{0}".format(shade)] = ttk.Scale(root, from_=0, to=100, variable=shade, command=scale)
+    d["scale{0}".format(shade)].place(x= x1, y=shade_y+(shade_height/2))
+    x1 += shade_width/(len(test_shade)+1)
+    i += 1
+    print(d["scale{0}".format(shade)])
 
 
 
 progress = ttk.Progressbar(root, value=0, variable=g, mode='determinate')
 progress.place(x=80, y=600)
 
-scale = ttk.Scale(root, from_=0, to=100, variable=g, command=scale)
-scale.place(x=80, y=620)
 
 # Light Buttons
 switch = ttk.Checkbutton(root, text='Toggle switch', style='Switch', variable=h, offvalue=0, onvalue=1)
