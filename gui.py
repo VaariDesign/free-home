@@ -47,6 +47,7 @@ weather_height = 200
 weather_x = 20
 weather_y =10
 
+
 temperature_width = (window_width/2) - 30
 temperature_height = 200
 temperature_x = ((window_width/2) + 10)
