@@ -87,12 +87,14 @@ frame4.place(x=lights_x, y=lights_y)
 
 
 # Shade buttons
-x1 = (shade_width/(len(test_shade)+1)) - 50
+x1 = (shade_width/(len(test_shade)+1)) -50 +shade_x
 d = {}
 i = 0
 for shade in test_shade:
-    d["scale{0}".format(shade)] = ttk.Scale(root, from_=0, to=100, variable=shade, command=scale)
+    d["scale{0}".format(shade)] = ttk.Scale(root, from_=0, to=100, variable=shade, command=scale,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
     d["scale{0}".format(shade)].place(x= x1, y=shade_y+(shade_height/2))
+    print(x1)
+    print(shade_width)
     x1 += shade_width/(len(test_shade)+1)
     i += 1
     print(d["scale{0}".format(shade)])
