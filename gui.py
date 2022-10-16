@@ -88,11 +88,18 @@ frame4.place(x=lights_x, y=lights_y)
 
 # Shade buttons
 x1 = (shade_width/(len(test_shade)+1)) -50 +shade_x
+y_shade = shade_y+(shade_height/2)
 d = {}
 i = 0
 for shade in test_shade:
+    label_name = ttk.Label(root,text=str(shade))
+    label_name.place(x= x1, y=y_shade - 20)
+    label0 = ttk.Label(root,text='0')
+    label0.place(x= x1-10, y=shade_y+(shade_height/2))
     d["scale{0}".format(shade)] = ttk.Scale(root, from_=0, to=100, variable=shade, command=scale,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
     d["scale{0}".format(shade)].place(x= x1, y=shade_y+(shade_height/2))
+    label100 = ttk.Label(root,text='100')
+    label100.place(x= x1+100, y=y_shade)
     print(x1)
     print(shade_width)
     x1 += shade_width/(len(test_shade)+1)
