@@ -87,7 +87,7 @@ frame4.place(x=lights_x, y=lights_y)
 
 
 # Shade buttons
-x1 = shade_width/(len(test_shade)+1)
+x1 = (shade_width/(len(test_shade)+1)) - 50
 d = {}
 i = 0
 for shade in test_shade:
@@ -96,6 +96,7 @@ for shade in test_shade:
     x1 += shade_width/(len(test_shade)+1)
     i += 1
     print(d["scale{0}".format(shade)])
+    print(shade)
 
 
 
