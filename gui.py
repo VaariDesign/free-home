@@ -1,6 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 
+import free_at_home_api
+from free_at_home_api import heating_obj, light_obj, shades_obj
+
 
 def callback():
     print('Button callback')
@@ -11,6 +14,7 @@ def scale(i):
 
 root = tk.Tk()
 root.title('Free@Home_Vaari')
+#root.resizable(False, False)
 
 window_width = 600
 window_height = 800
@@ -116,19 +120,23 @@ for shade in test_shade:
     i += 1
 
 
-
 x1 =60
 divide = 0
 y1 = 500
-for light in test_lights:
-    switch = ttk.Checkbutton(root, style='Switch', variable=light, offvalue=0, onvalue=1)
-    switch.place(x=x1, y=y1)
-    labelname3 = ttk.Label(root,text=str(light)+"Light_Bedroom")
+for light in light_obj:
+    value = tk.IntVar()
+    value.set(light.value)
+    print(value)
+    print(light.name +" "+ light.value)
+    d["Light{0}".format(light)] = ttk.Checkbutton(root, style='Switch', variable=value, offvalue=1, onvalue=0)
+    d["Light{0}".format(light)].place(x=x1, y=y1)
+    labelname3 = ttk.Label(root,text=str(light.name))
     labelname3.place(x= x1, y=y1+30)
-    switch.invoke()
+    d["Light{0}".format(light)].invoke()
+    print(d["Light{0}".format(light)])
     x1 += 150
     divide +=1
-    if divide % 4 == 0:
+    if divide % 3 == 0:
         y1 += 80
         x1 =60
 
