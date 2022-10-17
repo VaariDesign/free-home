@@ -91,34 +91,58 @@ x1 = (shade_width/(len(test_shade)+1)) -50 +shade_x
 y_shade = shade_y+(shade_height/2)
 d = {}
 i = 0
+test = 0
+
 for shade in test_shade:
     label_name = ttk.Label(root,text=str(shade))
     label_name.place(x= x1, y=y_shade - 20)
     label0 = ttk.Label(root,text='0')
     label0.place(x= x1-10, y=shade_y+(shade_height/2))
-    d["scale{0}".format(shade)] = ttk.Scale(root, from_=0, to=100, variable=shade, command=scale,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
-    d["scale{0}".format(shade)].place(x= x1, y=shade_y+(shade_height/2))
     label100 = ttk.Label(root,text='100')
     label100.place(x= x1+100, y=y_shade)
-    print(x1)
-    print(shade_width)
+    d["scale{0}".format(shade)] = ttk.Scale(root, from_=0, to=100, variable=shade, command=scale,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
+    d["scale{0}".format(shade)].place(x= x1, y=shade_y+(shade_height/2))
+
+
+    label_name2 = ttk.Label(root,text='Angle')
+    label_name2.place(x= x1, y=y_shade + 20)
+    label02 = ttk.Label(root,text='/')
+    label02.place(x= x1-10, y=shade_y+(shade_height/2)+40)
+    label03 = ttk.Label(root,text="\\")
+    label03.place(x= x1+105, y=y_shade+40)
+    d["angle{0}".format(shade)] = ttk.Scale(root, from_=0, to=100, variable=test, command=test,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
+    d["angle{0}".format(shade)].place(x= x1, y=shade_y+(shade_height/2)+40)
     x1 += shade_width/(len(test_shade)+1)
     i += 1
-    print(d["scale{0}".format(shade)])
-    print(shade)
 
 
 
-progress = ttk.Progressbar(root, value=0, variable=g, mode='determinate')
-progress.place(x=80, y=600)
+x1 =60
+divide = 0
+y1 = 500
+for light in test_lights:
+    switch = ttk.Checkbutton(root, style='Switch', variable=light, offvalue=0, onvalue=1)
+    switch.place(x=x1, y=y1)
+    labelname3 = ttk.Label(root,text=str(light)+"Light_Bedroom")
+    labelname3.place(x= x1, y=y1+30)
+    switch.invoke()
+    x1 += 150
+    divide +=1
+    if divide % 4 == 0:
+        y1 += 80
+        x1 =60
 
 
-# Light Buttons
-switch = ttk.Checkbutton(root, text='Toggle switch', style='Switch', variable=h, offvalue=0, onvalue=1)
-switch.place(x=40, y=700)
-switch.invoke()
 
 
+
+
+#    x_icon =x1 + 100/4
+#    z = 0
+#    for times in range(1-5):
+#        progress = ttk.Progressbar(root, value=0, variable=shade, mode='determinate', orient='vertical', length=50)
+#        progress.place(x=x_icon, y=200)
+#        z += 10
 
 
 #entry = ttk.Entry(root)
