@@ -8,7 +8,6 @@ from free_at_home_api import heating_obj, light_obj, shades_obj
 def callback():
     print('Button callback')
 
-
 def scale(i):
     g.set(int(scale.get()))
 
