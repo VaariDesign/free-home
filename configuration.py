@@ -119,24 +119,24 @@ for device in package_json[sysap]['devices']:
    
 #Following is configuration specific data, it varies system to system
 #Getting temperatures
-temperature_livingroom = package_json[sysap]['devices']['ABB7F597AE14']['channels']['ch0000']['outputs']['odp0010']['value']
-temperature_bedroom = package_json[sysap]['devices']['ABB7F597AD39']['channels']['ch0000']['outputs']['odp0010']['value']
-temperature_bathroom = package_json[sysap]['devices']['ABB7F597AD18']['channels']['ch0000']['outputs']['odp0010']['value']
-temperature_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0002']['outputs']['odp0001']['value']
+#temperature_livingroom = package_json[sysap]['devices']['ABB7F597AE14']['channels']['ch0000']['outputs']['odp0010']['value']
+#temperature_bedroom = package_json[sysap]['devices']['ABB7F597AD39']['channels']['ch0000']['outputs']['odp0010']['value']
+#temperature_bathroom = package_json[sysap]['devices']['ABB7F597AD18']['channels']['ch0000']['outputs']['odp0010']['value']
+#temperature_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0002']['outputs']['odp0001']['value']
 
 #Data from roof sensor
-light_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0000']['outputs']['odp0001']['value']
-wind_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0003']['value']
-windscale_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0001']['value']
+#light_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0000']['outputs']['odp0001']['value']
+#wind_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0003']['value']
+#windscale_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0001']['value']
 
-print(temperature_livingroom +" Livingroom")
-print(temperature_bedroom +" Bedroom")
-print(temperature_bathroom +" Bathroom")
-print(temperature_outside +" Outside")
+#print(temperature_livingroom +" Livingroom")
+#print(temperature_bedroom +" Bedroom")
+#print(temperature_bathroom +" Bathroom")
+#print(temperature_outside +" Outside")
 
-print(light_outside +" Lux Outside")
-print(wind_outside +" m/s Outside")
-print(windscale_outside +" bft Outside(The Beaufort scale)")
+#print(light_outside +" Lux Outside")
+#print(wind_outside +" m/s Outside")
+#print(windscale_outside +" bft Outside(The Beaufort scale)")
 
 
 print("!!!!!!!!!!!!!!!!!! Ended succesfully !!!!!!!!!!!!!!!!!!!")
