@@ -2,7 +2,6 @@ import requests
 import json
 
 import input_data
-
 from classes import Light
 from classes import Heating
 from classes import Shade
@@ -110,9 +109,7 @@ for device in package_json[sysap]['devices']:
 
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 290:
                     output_ang = outputchannel
-
-
-
+                    
             shades_obj.append(make_shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang))
      
     
