@@ -34,6 +34,28 @@ def make_shade(sysap, device, channel, displayname, input_pos, input_ang, output
     locals()[variable_name].status()
     return locals()[variable_name]
 
+def update(light_obj, heating_obj, shades_obj):
+    #Get configuration of the free@home system
+    confiq = requests.get('http://'+url+'/fhapi/v1/api/rest/configuration', auth=(user, password))
+    package_json = confiq.json() #Turn data to json
+    package_str = json.dumps(package_json, indent=2)
+    with open('confiq.txt','w') as f:
+        f.write(package_str)
+
+    # Update all values
+    for light in light_obj:
+        light.value = package_json[light.sysap]['devices'][str(light.device)]['channels'][light.channel]['inputs'][light.inputchannel]["value"]
+
+    for shade in shades_obj:
+        shade.position = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_pos]["value"]
+        shade.angle = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_ang]["value"]
+
+    for heat in heating_obj:
+        heat.target = package_json[heat.sysap]['devices'][str(heat.device)]['channels'][heat.channel]['outputs'][heat.outputchannel]["value"]
+        heat.temperature = package_json[heat.sysap]['devices'][str(heat.device)]['channels'][heat.channel]['outputs'][heat.temperature_channel]["value"]
+
+
+
 
 user = input_data.user
 password = input_data.password #same as log in your free@home
@@ -50,21 +72,21 @@ sysap = package_str[5:41] #get the sysap name from configuration
 #make txt file from confiq string. Easier to watch with notepad
 with open('confiq.txt','w') as f:
     f.write(package_str)
-    
-    
- 
+
+
+
 
 light_obj = []
 shades_obj = []
 heating_obj = []
 
-    
- 
+
+
 for device in package_json[sysap]['devices']:
-  for channel in package_json[sysap]['devices'][str(device)]['channels']:
-    if len(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']) <= 2:
+    for channel in package_json[sysap]['devices'][str(device)]['channels']:
+        if len(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']) <= 2:
             print("Too short device name: Less than 2 characters")
-     # Lights
+            # Lights
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
             displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
 
@@ -73,7 +95,7 @@ for device in package_json[sysap]['devices']:
                     light_obj.append(make_light(sysap,device,channel,displayname,inputchannel))
 
 
-        # Heating
+            # Heating
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '23':
             displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
 
@@ -91,7 +113,7 @@ for device in package_json[sysap]['devices']:
             heating_obj.append(make_heating(sysap,device,channel,displayname,inputchannel, outputchannel, temperature_channel))
 
 
-        # Shades / Blinds
+            # Shades / Blinds
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '9':
             displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
 
@@ -109,11 +131,11 @@ for device in package_json[sysap]['devices']:
 
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 290:
                     output_ang = outputchannel
-                    
+
             shades_obj.append(make_shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang))
-     
-    
-   
+
+
+
 #Following is configuration specific data, it varies system to system
 #Getting temperatures
 #temperature_livingroom = package_json[sysap]['devices']['ABB7F597AE14']['channels']['ch0000']['outputs']['odp0010']['value']
