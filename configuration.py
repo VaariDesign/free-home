@@ -136,4 +136,7 @@ for device in package_json[sysap]['devices']:
 #print(windscale_outside +" bft Outside(The Beaufort scale)")
 
 
+
+
+
 print("!!!!!!!!!!!!!!!!!! Ended succesfully !!!!!!!!!!!!!!!!!!!")
