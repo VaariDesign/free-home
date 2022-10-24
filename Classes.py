@@ -8,8 +8,10 @@ class Light:
         self.device = device
         self.channel = channel
         self.name = displayname
-        self.value = value
+        self.value = value              # only thing to update
         self.inputchannel = inputchannel
+        self.button = None
+        self.buttonvalue = None
 
 
     def light_on(self):
@@ -27,6 +29,20 @@ class Light:
     def show_name(self):
         print(self.name)
 
+    def toggle(self):
+        if self.value == "1":
+            self.light_off()
+            self.value = "0"
+            print(self.name +" is OFF")
+        elif self.value == "0":
+            self.light_on()
+            self.value = "1"
+            print(self.name +" is ON")
+        else:
+            print("Something is wrong with value it is "+ self.value)
+            print(type(self.value))
+
+
 
 class Heating:
     def __init__(self, sysap, device, channel, displayname, target, inputchannel, outputchannel, temperature_channel, temperature):
@@ -34,11 +50,11 @@ class Heating:
         self.device = device
         self.channel = channel
         self.name = displayname
-        self.target = target
+        self.target = target            # update
         self.inputchannel = inputchannel
         self.outputchannel = outputchannel
         self.temperature_channel = temperature_channel
-        self.temperature = temperature
+        self.temperature = temperature     #update
 
 
     def target_temperature(self):
@@ -62,8 +78,8 @@ class Shade:
         self.input_ang = input_ang
         self.output_pos = output_pos
         self.output_ang = output_ang
-        self.position = position
-        self.angle = angle
+        self.position = position #update
+        self.angle = angle      #update
 
 
     def status(self):
