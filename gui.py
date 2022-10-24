@@ -1,15 +1,37 @@
 import tkinter as tk
 from tkinter import ttk
 
-import free_at_home_api
-from free_at_home_api import heating_obj, light_obj, shades_obj
+import confiquration
+from confiquration import heating_obj, light_obj, shades_obj, update
 
 
 def callback():
     print('Button callback')
 
+
 def scale(i):
     g.set(int(scale.get()))
+
+
+def toggle_light(light):
+    light.toggle()
+    update(light_obj, heating_obj, shades_obj)
+    light.buttonvalue.set(light.value)
+
+
+#    light.toggle()
+
+def toggle_test(light):
+    #light.toggle()
+
+    print('Button callback ' +str(light.buttonvalue)+" "+str(light.value)+" "+str(light.name))
+    #print(type(value_dict[light.name].get()))
+    #light.status()
+
+
+#    light.toggle()
+
+
 
 root = tk.Tk()
 root.title('Free@Home_Vaari')
@@ -118,21 +140,22 @@ for shade in test_shade:
     x1 += shade_width/(len(test_shade)+1)
     i += 1
 
+value_dict = {}
 
 x1 =60
 divide = 0
 y1 = 500
+
+buttons = []
 for light in light_obj:
-    value = tk.IntVar()
-    value.set(light.value)
-    print(value)
-    print(light.name +" "+ light.value)
-    d["Light{0}".format(light)] = ttk.Checkbutton(root, style='Switch', variable=value, offvalue=1, onvalue=0)
-    d["Light{0}".format(light)].place(x=x1, y=y1)
+    light.buttonvalue = tk.IntVar()
+    light.buttonvalue.set(light.value)
+    light.button = ttk.Checkbutton(root, style='Switch', variable=light.buttonvalue,command=lambda light=light: toggle_light(light), offvalue=0, onvalue=1)
+    light.button.place(x=x1, y=y1)
+
+
     labelname3 = ttk.Label(root,text=str(light.name))
     labelname3.place(x= x1, y=y1+30)
-    d["Light{0}".format(light)].invoke()
-    print(d["Light{0}".format(light)])
     x1 += 150
     divide +=1
     if divide % 3 == 0:
@@ -141,6 +164,9 @@ for light in light_obj:
 
 
 
+
+#toggle = ttk.Checkbutton(root, text='Toggle button', style='Togglebutton', variable=f, offvalue=0, onvalue=1)
+#toggle.place(x=250, y=420)
 
 
 
