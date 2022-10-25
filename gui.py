@@ -8,7 +8,6 @@ from confiquration import heating_obj, light_obj, shades_obj, update
 def callback():
     print('Button callback')
 
-
 def scale(i):
     g.set(int(scale.get()))
 
