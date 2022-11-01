@@ -7,7 +7,7 @@ https://www.youtube.com/shorts/BKjozYJoGFU
 
 
 Info
-# https://developer.eu.mybuildings.abb.com/fah_cloud/concepts/
+https://developer.eu.mybuildings.abb.com/fah_cloud/concepts/
 
 FunctionIDs
 https://developer.eu.mybuildings.abb.com/fah_cloud/reference/functionids/
