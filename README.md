@@ -1,7 +1,6 @@
 # free-home API GUI
 example using free@home API
 
-
 Current Status
 https://www.youtube.com/shorts/BKjozYJoGFU
 
