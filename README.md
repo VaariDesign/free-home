@@ -1,4 +1,4 @@
-# free-home
+# free-home API GUI
 example using free@home API
 
 
