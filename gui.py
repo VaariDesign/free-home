@@ -8,6 +8,7 @@ from confiquration import heating_obj, light_obj, shades_obj, update
 def callback():
     print('Button callback')
 
+
 def scale(i):
     g.set(int(scale.get()))
 
@@ -15,15 +16,18 @@ def scale(i):
 def toggle_light(light):
     light.toggle()
     update(light_obj, heating_obj, shades_obj)
+    print(light.value)
     light.buttonvalue.set(light.value)
+    root.update()
 
 
-#    light.toggle()
-
-def toggle_test(light):
+def toggle_test(shade):
+    #light.toggle()
+    update(light_obj, heating_obj, shades_obj)
+    shade.buttonvalue.set(shade.value)
     #light.toggle()
 
-    print('Button callback ' +str(light.buttonvalue)+" "+str(light.value)+" "+str(light.name))
+    #print('Button callback ' +str(light.buttonvalue)+" "+str(light.value)+" "+str(light.name))
     #print(type(value_dict[light.name].get()))
     #light.status()
 
@@ -83,7 +87,7 @@ shade_x = 20
 shade_y =weather_y + weather_height +10
 
 lights_width = (window_width - 40)
-lights_height = 200
+lights_height =60 + 60 * ((len(light_obj)//5)+1)
 lights_x = 20
 lights_y =shade_y + shade_height +10
 
@@ -116,16 +120,23 @@ y_shade = shade_y+(shade_height/2)
 d = {}
 i = 0
 test = 0
+#light.buttonvalue = tk.IntVar()
+#light.buttonvalue.set(light.value)
+#light.button = ttk.Checkbutton(root, style='Switch', variable=light.buttonvalue,command=lambda light=light: toggle_light(light), offvalue=0, onvalue=1)
+#light.button.place(x=x1, y=y1)
 
-for shade in test_shade:
-    label_name = ttk.Label(root,text=str(shade))
+
+
+
+for shade in shades_obj:
+    label_name = ttk.Label(root,text=str(shade.name))
     label_name.place(x= x1, y=y_shade - 20)
     label0 = ttk.Label(root,text='0')
     label0.place(x= x1-10, y=shade_y+(shade_height/2))
     label100 = ttk.Label(root,text='100')
     label100.place(x= x1+100, y=y_shade)
-    d["scale{0}".format(shade)] = ttk.Scale(root, from_=0, to=100, variable=shade, command=scale,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
-    d["scale{0}".format(shade)].place(x= x1, y=shade_y+(shade_height/2))
+    shade.button = ttk.Scale(root, from_=0, to=100, variable=shade.buttonvalue, command=scale,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
+    shade.button.place(x= x1, y=shade_y+(shade_height/2))
 
 
     label_name2 = ttk.Label(root,text='Angle')
@@ -141,25 +152,30 @@ for shade in test_shade:
 
 value_dict = {}
 
-x1 =60
+x1 =lights_x +30
 divide = 0
-y1 = 500
+y1 = lights_y + 30
 
 buttons = []
 for light in light_obj:
     light.buttonvalue = tk.IntVar()
     light.buttonvalue.set(light.value)
-    light.button = ttk.Checkbutton(root, style='Switch', variable=light.buttonvalue,command=lambda light=light: toggle_light(light), offvalue=0, onvalue=1)
+    light.button = ttk.Checkbutton(root, style='Switch', variable=light.buttonvalue,command=lambda light=light: toggle_light(light), offvalue="0", onvalue="1")
     light.button.place(x=x1, y=y1)
 
+    #Put name of button about middle of switch
+    removed = light.name.replace("Light",'').strip().replace(" ",'\n').capitalize()
+    adapt = 0
 
-    labelname3 = ttk.Label(root,text=str(light.name))
-    labelname3.place(x= x1, y=y1+30)
-    x1 += 150
+
+
+    labelname3 = ttk.Label(root,text=str(removed))
+    labelname3.place(x= x1 - adapt, y=y1+25)
+    x1 += 115   #150
     divide +=1
-    if divide % 3 == 0:
-        y1 += 80
-        x1 =60
+    if divide % 5 == 0:
+        y1 += 70
+        x1 =lights_x +30
 
 
 
