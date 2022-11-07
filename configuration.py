@@ -45,6 +45,8 @@ def update(light_obj, heating_obj, shades_obj):
     # Update all values
     for light in light_obj:
         light.value = package_json[light.sysap]['devices'][str(light.device)]['channels'][light.channel]['inputs'][light.inputchannel]["value"]
+        #light.buttonvalue = int(light.value)
+        print(light.name+" "+light.value+" "+light.buttonvalue)
 
     for shade in shades_obj:
         shade.position = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_pos]["value"]
@@ -135,17 +137,20 @@ for device in package_json[sysap]['devices']:
             shades_obj.append(make_shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang))
 
 
+# Weather station
+
+
 
 #Following is configuration specific data, it varies system to system
 #Getting temperatures
 #temperature_livingroom = package_json[sysap]['devices']['ABB7F597AE14']['channels']['ch0000']['outputs']['odp0010']['value']
 #temperature_bedroom = package_json[sysap]['devices']['ABB7F597AD39']['channels']['ch0000']['outputs']['odp0010']['value']
 #temperature_bathroom = package_json[sysap]['devices']['ABB7F597AD18']['channels']['ch0000']['outputs']['odp0010']['value']
-#temperature_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0002']['outputs']['odp0001']['value']
+#temperature_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0002']['outputs']['odp0001']['value'] "functionID": "43"
 
-#Data from roof sensor
-#light_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0000']['outputs']['odp0001']['value']
-#wind_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0003']['value']
+#Data from roof sensor    pairingID": 1027
+#light_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0000']['outputs']['odp0001']['value']  functionID": "41"
+#wind_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0003']['value'] functionID": "44"
 #windscale_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0001']['value']
 
 #print(temperature_livingroom +" Livingroom")
