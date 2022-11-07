@@ -2,7 +2,7 @@
 example using free@home API
 
 
-Current Status
+# Current Status
 https://www.youtube.com/shorts/BKjozYJoGFU
 
 Info
