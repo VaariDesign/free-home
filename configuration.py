@@ -5,6 +5,7 @@ import input_data
 from classes import Light
 from classes import Heating
 from classes import Shade
+from classes import Weather
 
 
 def make_light(sysap, device, channel, displayname, inputchannel):
@@ -33,6 +34,12 @@ def make_shade(sysap, device, channel, displayname, input_pos, input_ang, output
     print(variable_name)
     locals()[variable_name] = Shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang, position, angle)
     locals()[variable_name].status()
+    return locals()[variable_name]
+
+def make_weather(sysap, device, channel, displayname, outputchannel):
+    value = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["value"]
+    variable_name = displayname
+    locals()[variable_name] = Weather(sysap, device, channel, displayname, value, outputchannel)
     return locals()[variable_name]
 
 def update(light_obj, heating_obj, shades_obj):
@@ -80,6 +87,7 @@ with open('confiq.txt', 'w') as f:
 light_obj = []
 shades_obj = []
 heating_obj = []
+weather_obj = []
 
 
 
@@ -142,25 +150,25 @@ for device in package_json[sysap]['devices']:
 
             for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1027:
-                    output_pos = outputchannel
+                    weather_obj.append(make_weather(sysap, device, channel, displayname, outputchannel))
 
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '42':
             displayname = "Rain_Sensor"
             for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1029:
-                    output_pos = outputchannel
+                    weather_obj.append(make_weather(sysap, device, channel, displayname, outputchannel))
 
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '43':
             displayname = "Temperature_Outside"
             for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1024:
-                    output_pos = outputchannel
+                    weather_obj.append(make_weather(sysap, device, channel, displayname, outputchannel))
 
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '44':
             displayname = "Wind_Outside"
             for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1028:
-                    output_pos = outputchannel
+                    weather_obj.append(make_weather(sysap, device, channel, displayname, outputchannel))
 
 
 
