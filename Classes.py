@@ -80,6 +80,9 @@ class Shade:
         self.output_ang = output_ang
         self.position = position #update
         self.angle = angle      #update
+        self.button = None
+        self.buttonvalue = None
+
 
 
     def status(self):
@@ -93,3 +96,12 @@ class Shade:
     def move_angle(self, angle):
         requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.input_ang, auth=(input_data.user, input_data.password), data=angle)
 
+
+class Weather:
+    def __init__(self, sysap, device, channel, displayname, outputchannel, value):
+        self.sysap = sysap
+        self.device = device
+        self.channel = channel
+        self.name = displayname
+        self.outputchannel = outputchannel
+        self.value = value    #update
