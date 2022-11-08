@@ -6,21 +6,22 @@ from classes import Light
 from classes import Heating
 from classes import Shade
 
-def make_light(sysap,device,channel,displayname,inputchannel):
+
+def make_light(sysap, device, channel, displayname, inputchannel):
     value = package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["value"]
-    name =str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
-    variable_name = name.replace(" ","_")
-    locals()[variable_name] = Light(sysap,device,channel, displayname, value, inputchannel)
+    name = str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
+    variable_name = name.replace(" ", "_")
+    locals()[variable_name] = Light(sysap, device, channel, displayname, value, inputchannel)
     return locals()[variable_name]
 
 
-def make_heating(sysap,device,channel,displayname,inputchannel, outputchannel, temperature_channel):
+def make_heating(sysap, device, channel, displayname, inputchannel, outputchannel, temperature_channel):
     target = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["value"]
     temperature = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][temperature_channel]["value"]
-    name =str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
-    variable_name = name.replace(" ","_")
+    name = str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
+    variable_name = name.replace(" ", "_")
     #print(variable_name)
-    locals()[variable_name] = Heating(sysap,device,channel, displayname, target, inputchannel,outputchannel, temperature_channel,temperature)
+    locals()[variable_name] = Heating(sysap, device, channel, displayname, target, inputchannel, outputchannel, temperature_channel,temperature)
     return locals()[variable_name]
 
 
@@ -39,7 +40,7 @@ def update(light_obj, heating_obj, shades_obj):
     confiq = requests.get('http://'+url+'/fhapi/v1/api/rest/configuration', auth=(user, password))
     package_json = confiq.json() #Turn data to json
     package_str = json.dumps(package_json, indent=2)
-    with open('confiq.txt','w') as f:
+    with open('confiq.txt', 'w') as f:
         f.write(package_str)
 
     # Update all values
@@ -69,13 +70,11 @@ package_json = confiq.json() #Turn data to json
 package_str = json.dumps(package_json, indent=2)
 
 
-sysap = package_str[5:41] #get the sysap name from configuration
+sysap = package_str[5:41] # get the sysap name from configuration
 
-#make txt file from confiq string. Easier to watch with notepad
-with open('confiq.txt','w') as f:
+# make txt file from confiq string. Easier to watch with notepad
+with open('confiq.txt', 'w') as f:
     f.write(package_str)
-
-
 
 
 light_obj = []
@@ -94,7 +93,7 @@ for device in package_json[sysap]['devices']:
 
             for inputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["pairingID"] == 1:
-                    light_obj.append(make_light(sysap,device,channel,displayname,inputchannel))
+                    light_obj.append(make_light(sysap, device, channel, displayname, inputchannel))
 
 
             # Heating
@@ -112,7 +111,7 @@ for device in package_json[sysap]['devices']:
 
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel_look]["pairingID"] == 304:
                     temperature_channel = outputchannel_look
-            heating_obj.append(make_heating(sysap,device,channel,displayname,inputchannel, outputchannel, temperature_channel))
+            heating_obj.append(make_heating(sysap, device, channel, displayname, inputchannel, outputchannel, temperature_channel))
 
 
             # Shades / Blinds
@@ -136,8 +135,32 @@ for device in package_json[sysap]['devices']:
 
             shades_obj.append(make_shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang))
 
+            # Weather station
 
-# Weather station
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '41':
+            displayname = "Brightness"
+
+            for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1027:
+                    output_pos = outputchannel
+
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '42':
+            displayname = "Rain_Sensor"
+            for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1029:
+                    output_pos = outputchannel
+
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '43':
+            displayname = "Temperature_Outside"
+            for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1024:
+                    output_pos = outputchannel
+
+        elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '44':
+            displayname = "Wind_Outside"
+            for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
+                if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1028:
+                    output_pos = outputchannel
 
 
 
