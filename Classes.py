@@ -105,3 +105,4 @@ class Weather:
         self.name = displayname
         self.outputchannel = outputchannel
         self.value = value    #update
+
