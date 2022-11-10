@@ -2,10 +2,7 @@ import requests
 import json
 
 import input_data
-from classes import Light
-from classes import Heating
-from classes import Shade
-from classes import Weather
+from classes import Light, Heating, Shade, Weather
 
 
 def make_light(sysap, device, channel, displayname, inputchannel):
@@ -39,7 +36,7 @@ def make_shade(sysap, device, channel, displayname, input_pos, input_ang, output
 def make_weather(sysap, device, channel, displayname, outputchannel):
     value = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["value"]
     variable_name = displayname
-    locals()[variable_name] = Weather(sysap, device, channel, displayname, value, outputchannel)
+    locals()[variable_name] = Weather(sysap, device, channel, displayname, outputchannel, value)
     return locals()[variable_name]
 
 def update(light_obj, heating_obj, shades_obj):
@@ -54,7 +51,6 @@ def update(light_obj, heating_obj, shades_obj):
     for light in light_obj:
         light.value = package_json[light.sysap]['devices'][str(light.device)]['channels'][light.channel]['inputs'][light.inputchannel]["value"]
         #light.buttonvalue = int(light.value)
-        print(light.name+" "+light.value+" "+light.buttonvalue)
 
     for shade in shades_obj:
         shade.position = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_pos]["value"]
@@ -63,6 +59,11 @@ def update(light_obj, heating_obj, shades_obj):
     for heat in heating_obj:
         heat.target = package_json[heat.sysap]['devices'][str(heat.device)]['channels'][heat.channel]['outputs'][heat.outputchannel]["value"]
         heat.temperature = package_json[heat.sysap]['devices'][str(heat.device)]['channels'][heat.channel]['outputs'][heat.temperature_channel]["value"]
+
+    for data in weather_obj:
+        data.value = package_json[data.sysap]['devices'][str(data.device)]['channels'][data.channel]['outputs'][data.outputchannel]["value"]
+
+
 
 
 
@@ -169,6 +170,10 @@ for device in package_json[sysap]['devices']:
             for outputchannel in package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1028:
                     weather_obj.append(make_weather(sysap, device, channel, displayname, outputchannel))
+
+for object in weather_obj:
+    print(object.name + " " +object.value)
+
 
 
 
