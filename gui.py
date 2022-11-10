@@ -1,30 +1,26 @@
 import tkinter as tk
 from tkinter import ttk
 
-import confiquration
-from confiquration import heating_obj, light_obj, shades_obj, update
+from confiquration import heating_obj, light_obj, shades_obj, weather_obj, update
 
 
 def callback():
     print('Button callback')
 
 
-def scale(i):
-    g.set(int(scale.get()))
-
 
 def toggle_light(light):
     light.toggle()
     update(light_obj, heating_obj, shades_obj)
     print(light.value)
-    light.buttonvalue.set(light.value)
+    light.buttonvalue.config(light.value)
     root.update()
 
 
 def toggle_test(shade):
     #light.toggle()
-    update(light_obj, heating_obj, shades_obj)
-    shade.buttonvalue.set(shade.value)
+    update(light_obj, heating_obj, shades_obj, weather_obj)
+    #shade.buttonvalue.set(shade.value)
     #light.toggle()
 
     #print('Button callback ' +str(light.buttonvalue)+" "+str(light.value)+" "+str(light.name))
@@ -55,19 +51,6 @@ style = ttk.Style(root)
 root.tk.call('source', 'azuredark2/azuredark3.tcl')
 style.theme_use('azure')
 
-options = ['', 'OptionMenu', 'Value 1', 'Value 2']
-a = tk.IntVar()
-b = tk.IntVar()
-b.set(1)
-c = tk.IntVar()
-d = tk.IntVar()
-d.set(2)
-e = tk.StringVar()
-e.set(options[1])
-f = tk.IntVar()
-g = tk.IntVar()
-g.set(75)
-h = tk.IntVar()
 
 # Frame height and widths locations used to locate button places
 weather_width = (window_width/2) - 30
@@ -114,6 +97,15 @@ frame4 = ttk.LabelFrame(root, text='Lights', width=lights_width, height=lights_h
 frame4.place(x=lights_x, y=lights_y)
 
 
+
+# Weather info
+for data in weather_obj:
+    label_name = ttk.Label(root,text=str(data.name.replace("_",' ')), font=("Helvetica",15))
+    label_name.place(x= weather_x +10, y=weather_y +20)
+    label_value = ttk.Label(root,text=data.value, font=("Helvetica",15))
+    label_value.place(x= weather_x +225, y=weather_y +20)
+    weather_y += 50
+
 # Shade buttons
 x1 = (shade_width/(len(test_shade)+1)) -50 +shade_x
 y_shade = shade_y+(shade_height/2)
@@ -135,7 +127,7 @@ for shade in shades_obj:
     label0.place(x= x1-10, y=shade_y+(shade_height/2))
     label100 = ttk.Label(root,text='100')
     label100.place(x= x1+100, y=y_shade)
-    shade.button = ttk.Scale(root, from_=0, to=100, variable=shade.buttonvalue, command=scale,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
+    shade.button = ttk.Scale(root, from_=0, to=100, variable=shade.buttonvalue,orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
     shade.button.place(x= x1, y=shade_y+(shade_height/2))
 
 
@@ -150,13 +142,14 @@ for shade in shades_obj:
     x1 += shade_width/(len(test_shade)+1)
     i += 1
 
-value_dict = {}
+
+
+# Light Buttons
 
 x1 =lights_x +30
 divide = 0
 y1 = lights_y + 30
 
-buttons = []
 for light in light_obj:
     light.buttonvalue = tk.IntVar()
     light.buttonvalue.set(light.value)
@@ -177,37 +170,6 @@ for light in light_obj:
         y1 += 70
         x1 =lights_x +30
 
-
-
-
-#toggle = ttk.Checkbutton(root, text='Toggle button', style='Togglebutton', variable=f, offvalue=0, onvalue=1)
-#toggle.place(x=250, y=420)
-
-
-
-#    x_icon =x1 + 100/4
-#    z = 0
-#    for times in range(1-5):
-#        progress = ttk.Progressbar(root, value=0, variable=shade, mode='determinate', orient='vertical', length=50)
-#        progress.place(x=x_icon, y=200)
-#        z += 10
-
-
-#entry = ttk.Entry(root)
-#entry.place(x=250, y=20)
-#entry.insert(0, 'Entry')
-
-#spin = ttk.Spinbox(root, from_=0, to=100, increment=0.1)
-#spin.place(x=250, y=70)
-#spin.insert(0, 'Spinbox')
-
-#combo1 = ttk.Combobox(root, value=['Combobox', 'Editable item 1', 'Editable item 2'])
-#combo1.current(0)
-#combo1.place(x=250, y=120)
-
-#combo2 = ttk.Combobox(root, state='readonly', value=['Readonly combobox', 'Item 1', 'Item 2'])
-#combo2.current(0)
-#combo2.place(x=250, y=170)
 
 
 
