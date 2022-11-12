@@ -5,6 +5,7 @@ import input_data
 from classes import Light, Heating, Shade, Weather
 
 
+
 def make_light(sysap, device, channel, displayname, inputchannel):
     value = package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["value"]
     name = str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
@@ -39,7 +40,7 @@ def make_weather(sysap, device, channel, displayname, outputchannel):
     locals()[variable_name] = Weather(sysap, device, channel, displayname, outputchannel, value)
     return locals()[variable_name]
 
-def update(light_obj, heating_obj, shades_obj):
+def update(light_obj, heating_obj, shades_obj, weather_obj):
     #Get configuration of the free@home system
     confiq = requests.get('http://'+url+'/fhapi/v1/api/rest/configuration', auth=(user, password))
     package_json = confiq.json() #Turn data to json
@@ -50,7 +51,7 @@ def update(light_obj, heating_obj, shades_obj):
     # Update all values
     for light in light_obj:
         light.value = package_json[light.sysap]['devices'][str(light.device)]['channels'][light.channel]['inputs'][light.inputchannel]["value"]
-        #light.buttonvalue = int(light.value)
+        light.buttonvalue.set(light.value)
 
     for shade in shades_obj:
         shade.position = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_pos]["value"]
