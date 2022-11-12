@@ -80,8 +80,10 @@ class Shade:
         self.output_ang = output_ang
         self.position = position #update
         self.angle = angle      #update
-        self.button = None
-        self.buttonvalue = None
+        self.button1 = None
+        self.button2 = None
+        self.buttonvaluepos = None
+        self.buttonvalueang = None
 
 
 
@@ -105,4 +107,3 @@ class Weather:
         self.name = displayname
         self.outputchannel = outputchannel
         self.value = value    #update
-
