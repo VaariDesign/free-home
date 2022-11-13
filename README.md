@@ -18,4 +18,3 @@ Samples
 https://developer.eu.mybuildings.abb.com/fah_cloud/samples/
 
 
-
