@@ -5,7 +5,6 @@ import input_data
 from classes import Light, Heating, Shade, Weather
 
 
-
 def make_light(sysap, device, channel, displayname, inputchannel):
     value = package_json[sysap]['devices'][str(device)]['channels'][channel]['inputs'][inputchannel]["value"]
     name = str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
