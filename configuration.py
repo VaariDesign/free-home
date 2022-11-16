@@ -66,8 +66,6 @@ def update(light_obj, heating_obj, shades_obj, weather_obj):
 
 
 
-
-
 user = input_data.user
 password = input_data.password #same as log in your free@home
 url = input_data.url
