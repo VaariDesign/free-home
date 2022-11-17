@@ -1,4 +1,5 @@
 import requests
+
 import input_data
 
 
@@ -68,6 +69,14 @@ class Heating:
         print(self.device + " "+self.channel + " "+self.inputchannel + " ")
         requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=target)
 
+    def target_up(self,target):
+        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=target + 0.5)
+
+    def target_down(self,target):
+        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=target - 0.5)
+
+
+
 class Shade:
     def __init__(self, sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang, position, angle):
         self.sysap = sysap
@@ -107,3 +116,4 @@ class Weather:
         self.name = displayname
         self.outputchannel = outputchannel
         self.value = value    #update
+
