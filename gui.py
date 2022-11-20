@@ -46,18 +46,22 @@ def set_heating(heating_obj):
         temperature_y += 60
 
 
-def move_shade(shade):
-    print(str(shade.buttonvalueang.get()))
-    print(str(shade.buttonvaluepos.get()))
-    root.update()
+def move_shade(shade, object):
+    print((shade))
+    print(object)
+    shade.buttonvaluepos.set(object)
+    #shade.move_position(object)
+    #shade.move_position(shade.buttonvalueang)
+    update_gui()
 
+def angle_shade(shade, object):
+    print((shade))
+    print(object)
+    shade.buttonvalueang.set(object)
+    #shade.move_position(object)
+    #shade.move_position(shade.buttonvalueang)
+    update_gui()
 
-
-def update_gui():
-    update(light_obj, heating_obj, shades_obj, weather_obj)
-    weather(weather_obj)
-    set_heating(heating_obj)
-    root.update()
 
 def heat_up(heating):
     heating.target_up()
@@ -67,6 +71,11 @@ def heat_down(heating):
     heating.target_down()
     update_gui()
 
+def update_gui():
+    update(light_obj, heating_obj, shades_obj, weather_obj)
+    weather(weather_obj)
+    set_heating(heating_obj)
+    root.update()
 
 
 root = tk.Tk()
@@ -168,10 +177,14 @@ for shade in shades_obj:
     label0.place(x= x1-10, y=shade_y+(shade_height/2))
     label100 = ttk.Label(root,text='100')
     label100.place(x= x1+100, y=y_shade)
-
-    shade.buttonvaluepos = tk.IntVar(master=root, value=shade.position)
-    shade.button1 = ttk.Scale(root, from_=0, to=100, variable=shade.buttonvaluepos,command=lambda shade=shade: move_shade(shade), orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
+    shade.buttonvaluepos = tk.IntVar()
+    shade.buttonvaluepos.set(shade.position)
+    shade.button1 = ttk.Scale(root, from_=0, to=100, variable=shade.buttonvaluepos,command=lambda position=shade.buttonvaluepos: move_shade(shade,position), orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
     shade.button1.place(x= x1, y=shade_y+(shade_height/2))
+
+    print(shade.button1.get())
+    print(shade.buttonvaluepos.get())
+    print(type(shade))
 
 
     label_name2 = ttk.Label(root,text='Angle')
@@ -182,7 +195,7 @@ for shade in shades_obj:
     label03.place(x= x1+105, y=y_shade+40)
 
     shade.buttonvalueang = tk.IntVar(master=root, value=shade.angle)
-    shade.button2 = ttk.Scale(root, from_=0, to=100, variable=shade.buttonvalueang, command=lambda shade=shade: move_shade(shade), orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
+    shade.button2 = ttk.Scale(root, from_=0, to=100, variable=shade.buttonvalueang, command=lambda angle=shade.buttonvalueang: angle_shade(shade, angle), orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
     shade.button2.place(x= x1, y=shade_y+(shade_height/2)+40)
     x1 += shade_width/(len(test_shade)+1)
     i += 1
