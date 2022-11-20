@@ -1,5 +1,4 @@
 import requests
-
 import input_data
 
 
@@ -56,6 +55,9 @@ class Heating:
         self.outputchannel = outputchannel
         self.temperature_channel = temperature_channel
         self.temperature = temperature     #update
+        self.buttonvalue = None
+        self.button_plus = None
+        self.button_minus = None
 
 
     def target_temperature(self):
@@ -69,11 +71,11 @@ class Heating:
         print(self.device + " "+self.channel + " "+self.inputchannel + " ")
         requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=target)
 
-    def target_up(self,target):
-        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=target + 0.5)
+    def target_up(self):
+        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=str(float(self.target) + 0.5))
 
-    def target_down(self,target):
-        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=target - 0.5)
+    def target_down(self):
+        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.inputchannel, auth=(input_data.user, input_data.password), data=str(float(self.target) - 0.5))
 
 
 
@@ -116,4 +118,3 @@ class Weather:
         self.name = displayname
         self.outputchannel = outputchannel
         self.value = value    #update
-
