@@ -54,10 +54,10 @@ def update(light_obj, heating_obj, shades_obj, weather_obj):
         light.buttonvalue.set(light.value)
 
     for shade in shades_obj:
-        shade.position = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_pos]["value"]
+        shade.position = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['inputs'][shade.input_pos]["value"]
         shade.angle = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_ang]["value"]
-        shade.buttonvaluepos.set(shade.position)
-        shade.buttonvalueang.set(shade.angle)
+        #shade.buttonvaluepos.set(shade.position)
+        #shade.buttonvalueang.set(shade.angle)
 
     for heat in heating_obj:
         heat.target = package_json[heat.sysap]['devices'][str(heat.device)]['channels'][heat.channel]['inputs'][heat.inputchannel]["value"]
