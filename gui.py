@@ -18,22 +18,55 @@ def weather(weather_obj):
     weather_x = 20
     weather_y =10
     for data in weather_obj:
-        label_name = ttk.Label(root,text=str(data.name.replace("_",' ')), font=("Helvetica",15))
+        label_name = ttk.Label(root,text=str(data.name.replace("_",' ')), font=("Helvetica",12))
         label_name.place(x= weather_x +10, y=weather_y +20)
         label_value = ttk.Label(root,text=data.value, font=("Helvetica",15))
-        label_value.place(x= weather_x +225, y=weather_y +20)
+        label_value.place(x= weather_x +195, y=weather_y +20)
         weather_y += 50
 
+def set_heating(heating_obj):
+    temperature_x = 310
+    temperature_y = 10
+    for heat in heating_obj:
+        heat.button_plus = ttk.Button(root, text="+",command=lambda heat=heat: heat_up(heat),width=2)
+        heat.button_plus.place(x=temperature_x + 130, y=temperature_y + 20)
+
+        heat.button_minus = ttk.Button(root, text="-",command=lambda heat=heat: heat_down(heat),width=2)
+        heat.button_minus.place(x=temperature_x + 225, y=temperature_y + 20)
+
+        labelname_temperature = ttk.Label(root,text=heat.name.replace("controller",'').replace("contorller",''),font=("Helvetica",12))
+        labelname_temperature.place(x= temperature_x + 10, y=temperature_y + 20)
+
+        labelname_ctemperature = ttk.Label(root, text=heat.temperature, font=("Helvetica",20))
+        labelname_ctemperature.place(x= temperature_x + 20, y=temperature_y + 40)
+
+        labelname_ttemperature = ttk.Label(root,text=heat.target, font=("Helvetica",18))
+        labelname_ttemperature.place(x= temperature_x + 170, y=temperature_y + 20)
+
+        temperature_y += 60
+
+
 def move_shade(shade):
-    print(shade.buttonvaluepos)
-    print(shade.buttonvalueang)
+    print(str(shade.buttonvalueang.get()))
+    print(str(shade.buttonvaluepos.get()))
+    root.update()
 
 
 
 def update_gui():
     update(light_obj, heating_obj, shades_obj, weather_obj)
     weather(weather_obj)
+    set_heating(heating_obj)
     root.update()
+
+def heat_up(heating):
+    heating.target_up()
+    update_gui()
+
+def heat_down(heating):
+    heating.target_down()
+    update_gui()
+
 
 
 root = tk.Tk()
@@ -67,6 +100,7 @@ temperature_width = (window_width/2) - 30
 temperature_height = 200
 temperature_x = ((window_width/2) + 10)
 temperature_y =10
+
 
 shade_width = (window_width - 40)
 shade_height = 200
@@ -106,6 +140,11 @@ frame4.place(x=lights_x, y=lights_y)
 weather(weather_obj)
 
 
+# Temperature
+set_heating(heating_obj)
+
+
+
 # Shade buttons
 x1 = (shade_width/(len(test_shade)+1)) -50 +shade_x
 y_shade = shade_y+(shade_height/2)
@@ -116,6 +155,8 @@ test = 0
 #light.buttonvalue.set(light.value)
 #light.button = ttk.Checkbutton(root, style='Switch', variable=light.buttonvalue,command=lambda light=light: toggle_light(light), offvalue=0, onvalue=1)
 #light.button.place(x=x1, y=y1)
+
+
 
 
 
