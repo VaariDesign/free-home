@@ -54,7 +54,7 @@ def update(light_obj, heating_obj, shades_obj, weather_obj):
         light.buttonvalue.set(light.value)
 
     for shade in shades_obj:
-        shade.position = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['inputs'][shade.input_pos]["value"]
+        shade.position = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_pos]["value"]
         shade.angle = package_json[shade.sysap]['devices'][str(shade.device)]['channels'][shade.channel]['outputs'][shade.output_ang]["value"]
         #shade.buttonvaluepos.set(shade.position)
         #shade.buttonvalueang.set(shade.angle)
@@ -177,31 +177,6 @@ for device in package_json[sysap]['devices']:
 
 for object in weather_obj:
     print(object.name + " " +object.value)
-
-
-
-
-#Following is configuration specific data, it varies system to system
-#Getting temperatures
-#temperature_livingroom = package_json[sysap]['devices']['ABB7F597AE14']['channels']['ch0000']['outputs']['odp0010']['value']
-#temperature_bedroom = package_json[sysap]['devices']['ABB7F597AD39']['channels']['ch0000']['outputs']['odp0010']['value']
-#temperature_bathroom = package_json[sysap]['devices']['ABB7F597AD18']['channels']['ch0000']['outputs']['odp0010']['value']
-#temperature_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0002']['outputs']['odp0001']['value'] "functionID": "43"
-
-#Data from roof sensor    pairingID": 1027
-#light_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0000']['outputs']['odp0001']['value']  functionID": "41"
-#wind_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0003']['value'] functionID": "44"
-#windscale_outside = package_json[sysap]['devices']['ED0100003361']['channels']['ch0003']['outputs']['odp0001']['value']
-
-#print(temperature_livingroom +" Livingroom")
-#print(temperature_bedroom +" Bedroom")
-#print(temperature_bathroom +" Bathroom")
-#print(temperature_outside +" Outside")
-
-#print(light_outside +" Lux Outside")
-#print(wind_outside +" m/s Outside")
-#print(windscale_outside +" bft Outside(The Beaufort scale)")
-
 
 
 
