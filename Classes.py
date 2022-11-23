@@ -107,7 +107,7 @@ class Shade:
 
 
     def move_angle(self, angle):
-        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.input_ang, auth=(input_data.user, input_data.password), data=angle)
+        requests.put('http://'+input_data.url+'/fhapi/v1/api/rest/datapoint/'+self.sysap+'/'+self.device+'.'+self.channel+'.'+self.input_ang, auth=(input_data.user, input_data.password), data=str(angle))
 
 
 class Weather:
