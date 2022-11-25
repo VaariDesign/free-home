@@ -21,7 +21,6 @@ https://developer.eu.mybuildings.abb.com/fah_cloud/samples/
 
 
 
-
 Still in update:
 Adjust image for each configuration.
 
