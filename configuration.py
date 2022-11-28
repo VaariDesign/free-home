@@ -29,7 +29,6 @@ def make_shade(sysap, device, channel, displayname, input_pos, input_ang, output
     angle = package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][output_ang]["value"]
     name =str(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName'])
     variable_name = name.replace(" ","_")
-    print(variable_name)
     locals()[variable_name] = Shade(sysap, device, channel, displayname, input_pos, input_ang, output_pos, output_ang, position, angle)
     locals()[variable_name].status()
     return locals()[variable_name]
@@ -99,8 +98,8 @@ weather_obj = []
 for device in package_json[sysap]['devices']:
     for channel in package_json[sysap]['devices'][str(device)]['channels']:
         if len(package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']) <= 2:
-            print("Too short device name: Less than 2 characters")
-            # Lights
+            pass
+            #Lights
         elif package_json[sysap]['devices'][str(device)]['channels'][channel]['functionID'] == '7':
             displayname = package_json[sysap]['devices'][str(device)]['channels'][channel]['displayName']
 
@@ -175,10 +174,8 @@ for device in package_json[sysap]['devices']:
                 if package_json[sysap]['devices'][str(device)]['channels'][channel]['outputs'][outputchannel]["pairingID"] == 1028:
                     weather_obj.append(make_weather(sysap, device, channel, displayname, outputchannel))
 
-for object in weather_obj:
-    print(object.name + " " +object.value)
 
 
 
 
-print("!!!!!!!!!!!!!!!!!! Ended succesfully !!!!!!!!!!!!!!!!!!!")
+print("!!!!!!!!!!!!!!!!!! Confiq ended succesfully !!!!!!!!!!!!!!!!!!!")
