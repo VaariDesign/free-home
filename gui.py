@@ -2,38 +2,12 @@ import tkinter as tk
 from tkinter import ttk
 
 from confiquration import heating_obj, light_obj, shades_obj, weather_obj, update
-
-
-def callback():
-    print('Button callback')
-
+from classes import Light, Heating, Shade, Weather
 
 
 def toggle_light(light):
     light.toggle()
     update_gui()
-
-def move_shade(shade,nothing):
-
-    print((shade.name))
-    print(shade.buttonvaluepos.get())
-
-    shade.move_position(int(shade.buttonvaluepos.get()))
-    print(shade.buttonvaluepos.get())
-    #set_shades(shades_obj)
-
-
-def angle_shade(shade,nothing):
-    print((shade.name))
-    print((shade.buttonvalueang.get()))
-    print(shade.button1.get())
-    print(nothing)
-
-
-    shade.move_angle(int(shade.buttonvalueang.get()))
-    print(shade.buttonvalueang.get())
-    #set_shades(shades_obj)
-
 
 
 def weather(weather_obj):
@@ -70,12 +44,12 @@ def set_heating(heating_obj):
 def set_shades(shades_obj):
     x1 = (shade_width/(len(shades_obj)+1)) -50 +shade_x
     y_shade = shade_y+(shade_height/2)
-
-
     for shade in shades_obj:
+
         label_name = ttk.Label(root,text=str(shade.name))
         label_name.place(x= x1, y=shade_y + 20)
 
+        nothing = 0
         label0 = ttk.Label(root,text='0')
         label0.place(x= x1-10, y=shade_y+(shade_height/2))
 
@@ -83,7 +57,7 @@ def set_shades(shades_obj):
         label100.place(x= x1+100, y=y_shade)
 
         shade.buttonvaluepos = tk.IntVar(master=root, value=shade.position)
-        shade.button1 = tk.Scale(root,variable=shade.buttonvaluepos,command=lambda shade2=shade: move_shade(shade,shade2), orient=tk.HORIZONTAL, length=100, from_=0, to=100, resolution=1, ) #orient=tk.VERTICAL
+        shade.button1 = tk.Scale(root,variable=shade.buttonvaluepos,command= shade.move_position, orient=tk.HORIZONTAL, length=100, from_=0, to=100, resolution=1, ) #orient=tk.VERTICAL
         shade.button1.place(x= x1, y=shade_y+(shade_height/4))
 
 
@@ -97,15 +71,10 @@ def set_shades(shades_obj):
         label03.place(x= x1+105, y=y_shade+40)
 
         shade.buttonvalueang = tk.IntVar(master=root, value=shade.angle)
-        shade.button2 = tk.Scale(root, from_=0, to=100,resolution=1, variable=shade.buttonvalueang, command=lambda shade2=shade:angle_shade(shade,shade2), orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
+        shade.button2 = tk.Scale(root, from_=0, to=100,resolution=1, variable=shade.buttonvalueang, command=shade.move_angle, orient=tk.HORIZONTAL, length=100) #orient=tk.VERTICAL
         shade.button2.place(x= x1, y=shade_y+(shade_height/2)+40)
 
         x1 += shade_width/(len(shades_obj)+1)
-
-        print(shade.name)
-        print(shade.button1)
-        print(shade.buttonvaluepos.get())
-        print(shade.buttonvalueang.get())
 
 
 def heat_up(heating):
@@ -129,7 +98,7 @@ root.title('Free@Home_Vaari')
 #root.resizable(False, False)
 
 window_width = 600
-window_height = 800
+window_height = 700
 
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -217,8 +186,6 @@ for light in light_obj:
     if divide % 5 == 0:
         y1 += 70
         x1 =lights_x +30
-
-
 
 
 root.mainloop()
