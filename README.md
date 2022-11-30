@@ -10,6 +10,7 @@ example using free@home API
 # Current Status
 https://www.youtube.com/shorts/BKjozYJoGFU
 
+
 # Info
 https://developer.eu.mybuildings.abb.com/fah_cloud/concepts/
 
@@ -24,6 +25,9 @@ https://developer.eu.mybuildings.abb.com/fah_cloud/samples/
 
 
 
-Still in update:
-Adjust image for each configuration.
+Multiple things still need to be update:
+- Clean code / take off some extra lines
+- Adjust GUI layout for different size of sytems
+- Make GUI more beatiful
+
 
