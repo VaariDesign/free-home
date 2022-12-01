@@ -1,7 +1,6 @@
 import requests
 import input_data
 
-
 class Light:
     def __init__(self, sysap, device, channel, displayname, value, inputchannel):
         self.sysap = sysap
