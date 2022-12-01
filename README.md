@@ -8,6 +8,7 @@ example using free@home API
 
 
 # Current Status
+https://www.youtube.com/watch?v=nnX7ZyUCr40
 https://www.youtube.com/shorts/BKjozYJoGFU
 
 
