@@ -7,8 +7,9 @@ example using free@home API
 ![image](https://user-images.githubusercontent.com/84449958/204394536-93a92962-5160-4d30-a3b3-e9d6c51eed7d.png)
 
 
-# Current Status
+# Progress
 https://www.youtube.com/watch?v=nnX7ZyUCr40
+
 https://www.youtube.com/shorts/BKjozYJoGFU
 
 
