@@ -33,4 +33,3 @@ Multiple things still need to be update:
 - Adjust GUI layout for different size of sytems
 - Make GUI more beatiful
 
-
