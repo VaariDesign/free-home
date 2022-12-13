@@ -32,5 +32,3 @@ Multiple things still need to be update:
 - Clean code / take off some extra lines
 - Adjust GUI layout for different size of sytems
 - Make GUI more beatiful
-
-
