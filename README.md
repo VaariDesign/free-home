@@ -27,7 +27,6 @@ Samples
 https://developer.eu.mybuildings.abb.com/fah_cloud/samples/
 
 
-
 Multiple things still need to be update:
 - Clean code / take off some extra lines
 - Adjust GUI layout for different size of sytems
